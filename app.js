@@ -1,9 +1,10 @@
 const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
-
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
-const MongoAdapter = require('@bot-whatsapp/database/mongo')
-
+const MongoAdapter = require('@bot-whatsapp/database/mongo')  
+const { EVENTS } = require('@bot-whatsapp/bot')
+const REGEX_CREDIT_NUMBER = `/^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$/`
+const EXPRESION_DNI = /^[0-9]{7,8}[0-9K]$/
 /**
  * Declaramos las conexiones de Mongo
  */
@@ -25,68 +26,119 @@ const MONGO_DB_NAME = 'db_bot'
 
 const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
-const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswer(
-    [
-        '📄 Aquí encontras las documentación recuerda que puedes mejorarla',
-        'https://bot-whatsapp.netlify.app/',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
-
-const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
-    [
-        '🙌 Aquí encontras un ejemplo rapido',
-        'https://bot-whatsapp.netlify.app/docs/example/',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
-
-const flowGracias = addKeyword(['gracias', 'grac']).addAnswer(
-    [
-        '🚀 Puedes aportar tu granito de arena a este proyecto',
-        '[*opencollective*] https://opencollective.com/bot-whatsapp',
-        '[*buymeacoffee*] https://www.buymeacoffee.com/leifermendez',
-        '[*patreon*] https://www.patreon.com/leifermendez',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
-
-const flowDiscord = addKeyword(['discord']).addAnswer(
-    ['🤪 Únete al discord', 'https://link.codigoencasa.com/DISCORD', '\n*2* Para siguiente paso.'],
-    null,
-    null,
-    [flowSecundario]
-)
-
-const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
-    .addAnswer('🙌 Hola bienvenido a este *Chatbot*')
+const flowPagoActivadoBachiller = addKeyword(['listo', 'ya', 'pague'])
     .addAnswer(
         [
-            'te comparto los siguientes links de interes sobre el proyecto',
-            '👉 *doc* para ver la documentación',
-            '👉 *gracias*  para ver la lista de videos',
-            '👉 *discord* unirte al discord',
+            '📄 Te compartimos las entidades autorizadas para realizar el pago',
+            'Te espero unos minutos, escribe "listo" si ya realizaste el pago',
         ],
         null,
         null,
-        [flowDocs, flowGracias, flowTuto, flowDiscord]
+        [flowSecundario]
+)
+
+const flowTramiteBachillerDelay = addKeyword('hola')
+    .addAnswer(
+        [
+            'Escribe "listo" si ya lograste activar el pago de tu bachiller',
+        ],
+        null,
+        null,
+        [flowPagoActivadoBachiller]
+    ).addAnswer('Te espero unos minutos', {
+        delay: 5000,
+})
+
+const flowTramiteBachiller = addKeyword(['1'])
+    .addAnswer(
+        [
+            '🙌 Primero necesitas activar tu pago de bachiller ',
+            'Imágenes de los pasos',
+            'Link del portal',
+            'Te espero unos minutos, escribe "listo" si ya lograste activar el pago de tu bachiller'
+        ], null, async (ctx, { gotoFlow }) => {
+            try {
+                console.log(ctx);
+            } catch (error) {
+                console.error('Error en flowTramiteBachiller:', error);
+            }
+        },
+        [flowPagoActivadoBachiller]
+)
+
+const flowRequisitosCumplidosBachiller = addKeyword(['1'])
+    .addAnswer(
+        [
+            '🚀 Este es el cronograma de solicitudes (imagen)',
+            'Para iniciar el trámite se solicitará lo siguiente:',
+            '👉 Realizar el pago de diploma de bachiller (s/1100)',
+            '👉 Presentar la solicitud ',
+            '👉 En caso hayas hecho convalidación o traslado externo debes presentar la constancia de primer matricula de la institución de procedencia.',
+            '¿Deseas iniciar el tramite ahora?',
+            '\t1. Sí',
+            '\t2. No',
+        ],
+        null,
+        null,
+        [flowTramiteBachiller]
+)
+
+const flowFaltanRequisitosBachiller = addKeyword(['2'])
+    .addAnswer(
+        [
+            '🚀 Tienes que regularizar todos los requisitos necesarios para poder seguir ayudandote',
+            'Escribe "hola" si quieres iniciar una nueva consulta... '
+        ],
+        null,
+        null,
+)
+
+const flowBachiller = addKeyword(['1'])
+    .addAnswer(
+        ['🤪 Listado de requisitos', '\n¿Cumples con todos los requisitos?','\t1. Sí','\t2. No'],
+        null,
+        null,
+        [flowRequisitosCumplidosBachiller, flowFaltanRequisitosBachiller]
+)
+
+const flowMenu = addKeyword(REGEX_CREDIT_NUMBER, { regex: true })
+    .addAnswer(
+        ['🤪 Juanito indícame que información desea solicitar:','Este es mi menú de opciones escribe el número que deseas consultar:','\t1.Bachiller','\t2.Título Profesional'],
+        null,
+        null,
+        [flowBachiller]
+)
+
+const flowNombre = addKeyword(EVENTS.ACTION)
+    .addAnswer(
+        ['🤪 Ahora ingresa tu nombre:'],
+        null,
+        null,
+        [flowMenu]
     )
+
+const flowInicio = addKeyword('hola')
+    .addAnswer('🙌 ¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅')
+    .addAnswer('Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.')
+    .addAnswer('Para iniciar indicame cual es tu dni', {capture: true}, (ctx, { gotoFlow, fallBack }) => {
+        const param = EXPRESION_DNI.test(ctx.body)
+        if (!param) {
+        console.log(ctx)
+        return fallBack()
+        } else {
+            console.log(ctx)
+            gotoFlow(flowNombre)
+        }
+    })
+
+
 
 const main = async () => {
     const adapterDB = new MongoAdapter({
         dbUri: MONGO_DB_URI,
-        dbName: MONGO_DB_NAME,
+        dbName: MONGO_DB_NAME,  
     })
-    const adapterFlow = createFlow([flowPrincipal])
+    const adapterFlow = createFlow([flowInicio])
     const adapterProvider = createProvider(BaileysProvider)
     createBot({
         flow: adapterFlow,
