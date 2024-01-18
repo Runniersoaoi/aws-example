@@ -3,8 +3,7 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MongoAdapter = require('@bot-whatsapp/database/mongo')  
 const { EVENTS } = require('@bot-whatsapp/bot')
-const REGEX_CREDIT_NUMBER = /^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$/u
-const EXPRESION_DNI = `/^[0-9]{7,8}[0-9K]$/`
+const EXPRESION_DNI = /^[0-9]{7,8}[0-9K]$/
 let nomUsuario = ""
 /**
  * Declaramos las conexiones de Mongo
@@ -79,7 +78,7 @@ const flowSolicitudCargada = addKeyword(['listo', 'ya', 'pague'])
 
 const flowSolicitudLista = addKeyword(['listo', 'ya', 'pague'])
     .addAnswer('🔗 Ingresa al portal del estudiante *https://estudiantes.continental.edu.pe/ingresar* en el apartado de tramites', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso2.png?raw=true', //'c:\ruta\imagen.png'
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activarpago-paso1.jpg?raw=true', //'c:\ruta\imagen.png'
     })
     .addAnswer('✅ Selecciona la opción Diploma de Bachiller y carga la solicitud.', {
         media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cargar-solicitud-paso1.png?raw=true', //'c:\ruta\imagen.png'
@@ -95,14 +94,14 @@ const flowSolicitudLista = addKeyword(['listo', 'ya', 'pague'])
 )
 
 const flowPagoListo = addKeyword(['listo', 'ya', 'pague'])
-    .addAnswer('📄 Descarga el formato de la solicitud y llénalo completamente según el instructivo. \n\nInstructivo para rellenar la solicitud:', {
-        media: 'https://drive.google.com/file/d/1O40Qqwx0Y3QZ9_ppDDnQJxbXC_uIvf0w/export?format=pdf', //'c:\ruta\imagen.png'
+    .addAnswer('', {
+        media: 'C:/Users/Admin/Desktop/bot-baileys/base-baileys-mongo/documents/Formato-de-bachiller-instructivo.pdf', //'c:\ruta\imagen.png'
     }) 
-    .addAnswer('🎓 Formato de bachiller:', {
-        media: 'https://docs.google.com/document/d/13HfyJPNXFvrNDB0c73YmvvlP_Tfo8SFL/edit?usp=sharing&ouid=102971995048904286536&rtpof=true&sd=true', //'c:\ruta\imagen.png'
-    })     
+    .addAnswer('', {
+        media: 'C:/Users/Admin/Desktop/bot-baileys/base-baileys-mongo/documents/Formato-de-bachiller.docx'})
     .addAnswer(
         [
+            '📄 Descarga el formato de la solicitud y llénalo completamente según el instructivo.🎓',
             '⏱️ Te espero unos minutos, escribe *listo* si ya rellenaste la solicitud'
         ],
         null,
@@ -279,39 +278,52 @@ const flowNoPoliticas = addKeyword(['2'])
         null,
 )
 
-const flowBienvenido = addKeyword(EXPRESION_DNI, { regex: true })
+const flowBienvenido = addKeyword(['continuar'])
     .addAnswer(
-        [`¡Wow 🤩 ¡Me encanta tu nombre! Vamos a ser muy buenos amigos.','\n🤩 Pero antes de continuar, 🔒 Por favor, tómate un momento para revisar nuestra política de confidencialidad y aceptarla para que podamos continuar con esta increíble experiencia juntos. 😊 https://holamusa.com/politica-de-confidencialidad/`,'\n🤓💬 *¿Aceptas nuestra política de confidencialidad?*','1️⃣ Si','2️⃣ No'],
+        '¡Encantado de conocerte!',
+        null,
+        async (ctx, { flowDynamic, state }) => {
+            const name = state.get('name')
+            await flowDynamic(`Genial!! ${name} 🤩 siento que vamos a ser muy buenos amigos.`)
+        }
+    )
+    .addAnswer(
+        ['🤩 Pero antes de continuar, 🔒 Por favor, tómate un momento para revisar nuestra política de confidencialidad y aceptarla para que podamos continuar con esta increíble experiencia juntos. 😊 https://holamusa.com/politica-de-confidencialidad/','\n🤓💬 *¿Aceptas nuestra política de confidencialidad?*','1️⃣ Si','2️⃣ No','\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*'],
         null,
         null,
         [flowMenu, flowNoPoliticas] 
 )
 
-const flowNombre = addKeyword(EVENTS.ACTION)
-    .addAnswer(
-        [
-            '🤗✍️ *Ahora* *proporcioname* *tu* *dni* *en* *un* *solo* *mensaje:*',  
-        ],
-        null,
-        null,
-        [flowBienvenido]
-    )
-
 const flowInicio = addKeyword('hola')
     .addAnswer('👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅')
     .addAnswer('🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.')
-    .addAnswer('Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n\n🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*', {capture: true}, (ctx, { gotoFlow, fallBack }) => {
-        const param = REGEX_CREDIT_NUMBER.test(ctx.body)
-        if (!param) {
-        console.log(ctx)
-        return fallBack()
-        } else {
-            console.log(ctx)
-            nomUsuario = ctx.body
-            console.log(nomUsuario)
-            gotoFlow(flowNombre)
+    .addAnswer(
+        'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n\n🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+        {
+            capture: true,
+        },
+        async (ctx, { flowDynamic, state }) => {
+            await state.update({ name: ctx.body })
+            flowDynamic('🤗 ¡Wow me encanta tu nombre!')
         }
-    })
+    )
+    .addAnswer(
+        '🤗✍️ *Ahora* *proporcioname* *tu* *dni* *en* *un* *solo* *mensaje:*',
+        {
+            capture: true,
+        },
+        async (ctx, { flowDynamic, state, fallBack}) => {
+            const param = EXPRESION_DNI.test(ctx.body)
+            if (!param) {
+                return fallBack()
+            } else {
+                await state.update({ dni: ctx.body })
+                const myState = state.getMyState()
+                await flowDynamic(`Gracias por tu dni! ${myState.name}`)
+        }
+    }
+)   
+.addAnswer('🤖🤖 Procesando información... escribe *continuar* para seguir con el proceso',null,null,[flowBienvenido])
 
 
 
