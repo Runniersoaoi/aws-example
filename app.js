@@ -3,7 +3,7 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MongoAdapter = require('@bot-whatsapp/database/mongo')  
 const { EVENTS } = require('@bot-whatsapp/bot')
-const EXPRESION_DNI = /^[0-9]{7,8}[0-9K]$/
+const EXPRESION_DNI = /^[0-9]{8}$/
 let nomUsuario = ""
 /**
  * Declaramos las conexiones de Mongo
@@ -24,11 +24,24 @@ const MONGO_DB_NAME = 'db_bot'
  * Primero declaras los submenus 1.1 y 2.1, luego el 1 y 2 y al final el principal.
  */
 const flowFotografiaListo = addKeyword(['listo'])
-    .addAnswer('🎯🚀 Genial ahora puedes hacer el seguimiento de tu solicitud en el portal del estudiante', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/indicaciones-fotografias.png?raw=true', //'c:\ruta\imagen.png'
+    .addAnswer(
+        [
+            '🎯🚀 Genial ahora puedes hacer el seguimiento de tu solicitud en el portal del estudiante. Siguiendo los siguientes pasos:'
+        ],
+        null,
+        null
+    )
+    .addAnswer('🔗 Ingresa al portal del estudiante *https://estudiantes.continental.edu.pe/ingresar* en el apartado de trámites', {
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso2.png?raw=true', //'c:\ruta\imagen.png'
+    }) 
+    .addAnswer('✅ Selecciona la opción Seguimiento y selecciona la solicitud enviada', {
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/seguimiento-apartado.png?raw=true', //'c:\ruta\imagen.png'
+    })  
+    .addAnswer('💻 Al ingresar a la solicitud, ⭐ podras visualizar su estado en el transcurso de los días, cuando este se asemeje al de la imagen significará que ya ha sido recibida por la oficina de Grados y Títulos, y estará pendiente a ser procesada. 🔨', {
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/seguimiento-estaddo.png?raw=true', //'c:\ruta\imagen.png'
     })
-    .addAnswer('👀 Recuerda tu solicitud sera atendida según el siguiente cronograma', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes.png?raw=true', //'c:\ruta\imagen.png'
+    .addAnswer('👀 Recuerda una vez recibida tu solicitud será atendida según el siguiente cronograma', {
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes2.png?raw=true', //'c:\ruta\imagen.png'
     })
     .addAnswer(
         [
@@ -40,12 +53,12 @@ const flowFotografiaListo = addKeyword(['listo'])
 
 const flowFotografia = addKeyword(['3'])
     .addAnswer('📄 Especificaciones de la fotografía', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/indicaciones-fotografias.png?raw=true', //'c:\ruta\imagen.png'
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/requisitos-fotografia.png?raw=true', //'c:\ruta\imagen.png'
     })
     .addAnswer(
         [
-            '🤓 Si tu fotografia cumple con todas las especificaciones puedes subirla al siguiente enlace: 🔗 *https://docs.google.com/forms/d/e/1FAIpQLSe4MFuDlhRIEuD9egYg3YjcX2T6gMsFjRikyPgtFV-JBWt4LQ/viewform*',
-            '⏱️ Te espero unos minutos, escribe *listo* si ya lograste subir tu foto'
+            '🤓 Si tu fotografia cumple con todas las especificaciones puedes subirla al siguiente enlace: \n🔗 *https://docs.google.com/forms/d/e/1FAIpQLSe4MFuDlhRIEuD9egYg3YjcX2T6gMsFjRikyPgtFV-JBWt4LQ/viewform*',
+            '\n⏱️ Te espero unos minutos, escribe *listo* si ya lograste subir tu foto'
         ],
         null,
         null,
@@ -55,8 +68,8 @@ const flowFotografia = addKeyword(['3'])
 const flowSubirFoto = addKeyword(['siguiente'])
     .addAnswer(
         [
-            '📸 Puedes subir tu foto al siguiente enlace 🔗 *https://docs.google.com/forms/d/e/1FAIpQLSe4MFuDlhRIEuD9egYg3YjcX2T6gMsFjRikyPgtFV-JBWt4LQ/viewform*',
-            '⏱️ Te espero unos minutos, escribe *listo* si ya lograste subir tu foto',
+            '📸 Por favor sube tu foto al siguiente enlace \n🔗 *https://docs.google.com/forms/d/e/1FAIpQLSe4MFuDlhRIEuD9egYg3YjcX2T6gMsFjRikyPgtFV-JBWt4LQ/viewform*',
+            '\n⏱️ Te espero unos minutos, escribe *listo* si ya lograste subir tu foto',
         ],
         null,
         null,
@@ -64,8 +77,15 @@ const flowSubirFoto = addKeyword(['siguiente'])
 )
 
 const flowSolicitudCargada = addKeyword(['listo', 'ya', 'pague'])
-    .addAnswer('👀 Verifica si cumples con todas las indicaciones para tu fotografía', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/indicaciones-fotografias.png?raw=true', //'c:\ruta\imagen.png'
+    .addAnswer(
+        [
+            '👀 Verifica si cumples con todas las indicaciones para tu fotografía'
+        ],
+        null,
+        null
+    )    
+    .addAnswer('📃 Listado de requisitos', {
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/requisitos-fotografia.png?raw=true', //'c:\ruta\imagen.png'
     })
     .addAnswer(
         [
@@ -77,8 +97,15 @@ const flowSolicitudCargada = addKeyword(['listo', 'ya', 'pague'])
 )
 
 const flowSolicitudLista = addKeyword(['listo', 'ya', 'pague'])
-    .addAnswer('🔗 Ingresa al portal del estudiante *https://estudiantes.continental.edu.pe/ingresar* en el apartado de tramites', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activarpago-paso1.jpg?raw=true', //'c:\ruta\imagen.png'
+    .addAnswer(
+        [
+            '👀 A continuación se detalla los pasos para que puedas cargar tu solicitud 🤓 ',
+        ],
+        null,
+        null,
+    )
+    .addAnswer('🔗 Ingresa al portal del estudiante *https://estudiantes.continental.edu.pe/ingresar* en el apartado de trámites', {
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso2.png?raw=true', //'c:\ruta\imagen.png'
     })
     .addAnswer('✅ Selecciona la opción Diploma de Bachiller y carga la solicitud.', {
         media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cargar-solicitud-paso1.png?raw=true', //'c:\ruta\imagen.png'
@@ -86,7 +113,7 @@ const flowSolicitudLista = addKeyword(['listo', 'ya', 'pague'])
     .addAnswer(
         [
             '🏫 Ademas si has realizado convalidación o traslado externo, tambien debes cargar la constancia de primera matricula de la institución de procedencia. (👀 Este documento debe contener la fecha exacta de inicio de sus estudios)',
-            '⏱️ Te espero unos minutos, escribe *listo* si ya cargaste la solicitud'
+            '\n⏱️ Te espero unos minutos, escribe *listo* si ya cargaste la solicitud'
         ],
         null,
         null,
@@ -94,15 +121,22 @@ const flowSolicitudLista = addKeyword(['listo', 'ya', 'pague'])
 )
 
 const flowPagoListo = addKeyword(['listo', 'ya', 'pague'])
-    .addAnswer('', {
+    .addAnswer(
+        [
+            '👀 A continuación se detalla los pasos para que puedas cargar tu solicitud 🤓 ',
+        ],
+        null,
+        null,
+    )
+    .addAnswer('Archivo 1', {
         media: 'C:/Users/Admin/Desktop/bot-baileys/base-baileys-mongo/documents/Formato-de-bachiller-instructivo.pdf', //'c:\ruta\imagen.png'
     }) 
-    .addAnswer('', {
+    .addAnswer('Archivo 2', {
         media: 'C:/Users/Admin/Desktop/bot-baileys/base-baileys-mongo/documents/Formato-de-bachiller.docx'})
     .addAnswer(
         [
-            '📄 Descarga el formato de la solicitud y llénalo completamente según el instructivo.🎓',
-            '⏱️ Te espero unos minutos, escribe *listo* si ya rellenaste la solicitud'
+            '📄🎓 Descarga el formato de la solicitud y llénalo completamente según el instructivo.',
+            '\n⏱️ Te espero unos minutos, escribe *listo* si ya rellenaste la solicitud'
         ],
         null,
         null,
@@ -110,48 +144,43 @@ const flowPagoListo = addKeyword(['listo', 'ya', 'pague'])
 )
 
 const flowPagoActivadoBachiller = addKeyword(['listo', 'ya', 'pague'])
+    .addAnswer('🏦 Te compartimos las entidades autorizadas para realizar el pago', {
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/metodos-pago.png?raw=true', //'c:\ruta\imagen.png'
+    })
     .addAnswer(
         [
-            '🏦 Te compartimos las entidades autorizadas para realizar el pago',
-            '⏱️ Te espero unos minutos, escribe *listo* si ya realizaste el pago',
+            '👀 Si necesitas más detalle sobre como realizar el pago, puedes acceder al siguiente enlace 🔗 *https://estudiantes.ucontinental.edu.pe/oficinas/tesoreria-creditos-y-cobranzas/instructivo-de-pagos/#app*  ',
+            '\n⏱️ Te espero unos minutos, escribe *listo* si ya realizaste el pago',
         ],
         null,
         null,
         [flowPagoListo]
 )
 
-const flowTramiteBachiller = addKeyword(['1'])
-    .addAnswer('🙌 Ingresa al Portal del Estudiante con este enlace 🔗 *https://estudiantes.continental.edu.pe/ingresar* . Accede con tu usuario y contraseña de estudiante.', {
+const flowTramiteBachillerOp = addKeyword(['listo'])
+    .addAnswer('➡️ A continuación te detallo los pasos a seguir una vez que se te aperture la nueva ventana 💻', {
         media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activarpago-paso1.jpg?raw=true', //'c:\ruta\imagen.png'
-    })
-    .addAnswer('📃 Haz click en *Tramites*', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso2.png?raw=true', //'c:\ruta\imagen.png'
-    })
-    .addAnswer('💁🏻‍♂️ Haz click en *Solicitudes de Autoservicio*', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso3.png?raw=true', //'c:\ruta\imagen.png'
-    })
-    .addAnswer('➡️ En la siguiente ventana dentro del menú *Categoría* elige la opción *Solicitudes académicas*, dentro de *Servicio* elige la opción *Solicitud de Trámite de pagos Bachiller – Título* y haz click en la opción *Continuar*.', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso4.png?raw=true', //'c:\ruta\imagen.png'
-    })
-    .addAnswer('💻 Inmediatamente después se mostrará la siguiente pantalla, Selecciona el trámite que quieres realizar.', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso5.png?raw=true', //'c:\ruta\imagen.png'
-    })
-    .addAnswer('🖊️ Selecciona el Idioma extranjero estudiado.',{
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso6.png?raw=true', //'c:\ruta\imagen.png'
-    })
-    .addAnswer('✅ Confirma el cumplimiento de todos los requisitos.',{
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso7.png?raw=true', //'c:\ruta\imagen.png'
-    })
-    .addAnswer('📧 Inmediatamente después te enviaremos un email comunicándote que la solicitud ha sido completada; y que puede realizar los abonos respectivos en los centros autorizado de pago.',{
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso8.png?raw=true', //'c:\ruta\imagen.png'
     })
     .addAnswer(
         [
-            '⏱️Te espero unos minutos, escribe *listo* si ya lograste activar el pago de tu bachiller'
+            '⏱️Te espero unos minutos, escribe *listo* si ya lograste activar el pago de tu Bachiller'
         ], 
         null,
         null,
         [flowPagoActivadoBachiller]
+)
+
+const flowTramiteBachillerAv = addKeyword(['1'])
+    .addAnswer('🙌 Aqui te dejo una 📃 infografía con los primeros pasos a seguir para que puedas realizar tu trámite 😊', {
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activarpago-paso1.jpg?raw=true', //'c:\ruta\imagen.png'
+    })
+    .addAnswer(
+        [
+            '⏱️Te espero unos minutos, escribe *listo* si ya lograste completar los primeros pasos'
+        ], 
+        null,
+        null,
+        [flowTramiteBachillerOp]
 )
 
 const flowStopTramiteBachiller = addKeyword(['2'])
@@ -163,142 +192,85 @@ const flowStopTramiteBachiller = addKeyword(['2'])
         null
 )
 
-const flowRequisitosCumplidosBachiller = addKeyword(['2'])
+const flowRequisitosCumplidosBachiller = addKeyword(['1'])
     .addAnswer('🚀 Este es el cronograma de solicitudes', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes.png?raw=true', //'c:\ruta\imagen.png'
+        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes2.png?raw=true', //'c:\ruta\imagen.png'
     })
     .addAnswer(
         [
             'Para iniciar el trámite se solicitará lo siguiente:',
-            '👉 Realizar el pago de diploma de bachiller (s/1100)',
+            '👉 Realizar el pago de diploma de Bachiller (s/1100)',
             '👉 Presentar la solicitud ',
             '👉 En caso hayas hecho convalidación o traslado externo debes presentar la constancia de primer matricula de la institución de procedencia.',
-            '\n¿Deseas iniciar el tramite ahora?',
+            '\n¿Deseas iniciar el trámite ahora?',
             '1️⃣ Si',
-            '2️⃣ No',
+            '2️⃣ No', 
         ],
         null,
         null,
-        [flowTramiteBachiller, flowStopTramiteBachiller]
+        [flowTramiteBachillerAv, flowStopTramiteBachiller]
 )
 
-const flowRequisitoPracticasPre = addKeyword(['2'])
+const flowFaltanRequisitosBachiller = addKeyword(['2'])
     .addAnswer(
         [
-            '📧 Comunícate con centro de idiomas al correo *centrodeidiomasuc@continental.edu.pe*',
+            '🚀 Aqui te dejo una lista de correos con los que tienes que comunicarte según el requisito que te falta:',
+            '\n1️⃣ Si necesitas acreditar un idioma extranjero nivel B1, escribe al correo de Centro de Idiomas UC 📧 *centrodeidiomasuc@continental.edu.pe*',
+            '2️⃣ En caso requieras acreditar prácticas preprofesionales, escribe al correo de Oportunidades Laborales UC 📧 *oportunidadeslaborales@continental.edu.pe*',
+            '3️⃣ Si necesitas acreditar proyección social y/o actividades extracurriculares escribe al correo de Vive Continental 📧 *vivecontinental@continental.edu.pe*',
+            '4️⃣ Para poder subsanar deuda con la universidad, escribe al correo de Caja UC 📧 *cajauc@continental.edu.pe* ',
+            '5️⃣ Si requieres la constancia de primera matrícula de institución de procedencia escribe al correo  de Grados y Títulos 📧 *gradosytitulos@continetal.edu.pe*'
         ],
         null,
         null,
+).addAnswer(
+    [
+        '😊 Si tienes alguna otra duda, puedes escribir *hola* para iniciar otra consulta'
+    ],
+    null,
+    null
 )
 
-const flowRequisitoIdioma = addKeyword(['1'])
+const flowBachiller = addKeyword(['2'])
     .addAnswer(
-        [
-            '📧 Comunícate con oportunidades laborales *oportunidadeslaborales@continental.edu.pe*',
+        ['📄 Listado de requisitos',
+        '\n👉 Tener la condición de *egresado*.',
+        '👉 Haber acreditado un *idioma extranjero Nivel B–1* en el Centro de idiomas.',
+        '👉 Haber realizado *prácticas preprofesionales* .',
+        '👉 Haber realizado *proyección social* y/o *actividades extracurriculares* .',
+        '👉 *No tener deuda* con la Universidad.',
+        '👉 En caso de *traslados externos* y/o *convalidación* , tener la *constancia de la primera matrícula* de la institución de procedencia con la fecha exacta.',
+        '\n🤓 ¿Cumples con todos los requisitos mencionados?',
+        '1️⃣ Si',
+        '2️⃣ No',
+        '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
         ],
-        null,
-        null,
-)
-
-const flowRequisitoProyeccion = addKeyword(['3'])
-    .addAnswer(
-        [
-            '📧 Comunícate con vive continental *vivecontinental@continental.edu.pe*',
-        ],
-        null,
-        null,
-)
-
-const flowRequisitoDeuda = addKeyword(['4'])
-    .addAnswer(
-        [
-            '👉 Comunicate con caja *cajauc@continental.edu.pe*📧 ',
-            '👉 Comunicate con hub de información (pendiente)📧 ',
-            '👉 Comunicate con recursos educacionales (pendiente)📧 '
-        ],
-        null,
-        null,
-)
-
-const flowRequisitoPrimeraMatricula = addKeyword(['5'])
-    .addAnswer(
-        [
-            '📧 Comunicate con grados y titulos *gradosytitulos@continetal.edu.pe*',
-        ],
-        null,
-        null,
-)
-
-const flowFaltanRequisitosBachiller = addKeyword(['1'])
-    .addAnswer(
-        [
-            '🚀 Indica que requisito te falta cumplir',
-            '\n1️⃣ Acreditar un idioma extranjero nivel B1 ',
-            '2️⃣ Acreditar prácticas preprofesionales ',
-            '3️⃣ Acreditar proyección social y/o actividades extracurriculares ',
-            '4️⃣ No tener deuda con la universidad ',
-            '5️⃣ Constancia de primera matrícula de institución de procedencia '
-        ],
-        null,
-        null,
-        [flowRequisitoIdioma, flowRequisitoPracticasPre, flowRequisitoProyeccion, flowRequisitoDeuda, flowRequisitoPrimeraMatricula]
-)
-
-const flowBachiller = addKeyword(['1'])
-    .addAnswer('📄 Listado de requisitos', {
-        media: 'https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/requisitos-bachiller.png?raw=true', //'c:\ruta\imagen.png'
-    })    
-    .addAnswer(
-        ['¿Cumples con todos los requisitos?','\n1️⃣ No','2️⃣ Si','\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*'],
         null,
         null,
         [flowRequisitosCumplidosBachiller, flowFaltanRequisitosBachiller]
-)
+    )   
 
-const flowMenu2 = addKeyword(['1'])
+const flowMenu2 = addKeyword(['1','Menu','Menú','menú','menu'])
     .addAnswer(
-        ['🤓💬 Selecciona la opción que más se adecue a tu caso', '\n1️⃣ Requisitos que debo cumplir','2️⃣ Pasos a seguir para realizar el tramite','3️⃣ Presentación de fotografía','\n✍️ *Escribe* *un* *número* *entre* *1* *y* *3*'],
+        ['🤓💬 Selecciona la opción que más se adecue a tu caso', '\n1️⃣ Pasos a seguir para realizar el trámite','2️⃣ Requisitos que debo cumplir','3️⃣ Presentación de fotografía','\n✍️ *Escribe* *un* *número* *entre* *1* *y* *3*'],
         null,
         null,
         [flowBachiller, flowRequisitosCumplidosBachiller, flowFotografia]
 )
 
-const flowMenu = addKeyword(['1'])
+const flowMenu = addKeyword(['continuar'])
     .addAnswer(
-        [`🤪 Indícame que información desea solicitar:`,'Este es mi menú de opciones escribe el número que deseas consultar:','\n1️⃣ Bachiller','2️⃣ Título Profesional', '\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*'],
+        ['🤓 Este es mi menú de opciones escribe el número según la información que desees consultar:','\n1️⃣ Bachiller','2️⃣ Título Profesional', '\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*'],
         null,
         null,
         [flowMenu2]
 )
 
-const flowNoPoliticas = addKeyword(['2'])
+const flowInicio = addKeyword('hola', 'Hola')
+    .addAnswer('👋¡Hola! Este es el WhatsApp oficial de la oficina de Grados y Títulos UC ✅')
+    .addAnswer('🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de Bachiller y Título Profesional.')
     .addAnswer(
-        ['🤖  Vaya no puedo ayudarte si no aceptas nuestra política de confidencialidad'],
-        null,
-        null,
-)
-
-const flowBienvenido = addKeyword(['continuar'])
-    .addAnswer(
-        '¡Encantado de conocerte!',
-        null,
-        async (ctx, { flowDynamic, state }) => {
-            const name = state.get('name')
-            await flowDynamic(`Genial!! ${name} 🤩 siento que vamos a ser muy buenos amigos.`)
-        }
-    )
-    .addAnswer(
-        ['🤩 Pero antes de continuar, 🔒 Por favor, tómate un momento para revisar nuestra política de confidencialidad y aceptarla para que podamos continuar con esta increíble experiencia juntos. 😊 https://holamusa.com/politica-de-confidencialidad/','\n🤓💬 *¿Aceptas nuestra política de confidencialidad?*','1️⃣ Si','2️⃣ No','\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*'],
-        null,
-        null,
-        [flowMenu, flowNoPoliticas] 
-)
-
-const flowInicio = addKeyword('hola')
-    .addAnswer('👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅')
-    .addAnswer('🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.')
-    .addAnswer(
-        'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n\n🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+        'Me encantaría saber tu nombre. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n\n🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
         {
             capture: true,
         },
@@ -323,7 +295,7 @@ const flowInicio = addKeyword('hola')
         }
     }
 )   
-.addAnswer('🤖🤖 Procesando información... escribe *continuar* para seguir con el proceso',null,null,[flowBienvenido])
+.addAnswer('🤖🤖 Procesando información... escribe *continuar* para seguir con el proceso',null,null,[flowMenu])
 
 
 
