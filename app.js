@@ -329,12 +329,6 @@ const flowMenuBachiller = addKeyword(["1"]).addAnswer(
   [flowBachiller, flowRequisitosCumplidosBachiller, flowFotografia]
 );
 
-const flowSustentacionTesis1 = addKeyword(["1"]).addAnswer(
-  ["Enviar pasos en formato de infografía"],
-  null,
-  null
-);
-
 const flowSustentacionTesis21 = addKeyword(["1"]).addAnswer(
   [
     "🚀 Para iniciar con el proceso usted:",
@@ -523,7 +517,11 @@ const flowSustentacionTesis25 = addKeyword(["5"]).addAnswer(
   null
 );
 
-const flowSustentacionTesis2 = addKeyword(["2"]).addAnswer(
+const flowSustentacionTesis2 = addKeyword([
+  "2",
+  "continuar",
+  "Continuar",
+]).addAnswer(
   [
     "🤓💬 Estas son las etapas del proceso de sustentación. Indica en qué etapa te encuentras.",
     "\n1️⃣ Designación de asesor",
@@ -554,12 +552,23 @@ const flowSustentacionTesis3 = addKeyword(["3"]).addAnswer(
   null,
   null
 );
-
+const flowSustentacionTesis1 = addKeyword(["1"])
+  .addAnswer("🖊️ Revisa los pasos para iniciar", {
+    media:
+      "https://github.com/Runniersoaoi/aws-example/blob/titulacion/img/Infografias%20Bot%20Wsp%20UC.png?raw=true", //'c:\ruta\imagen.png'
+  })
+  .addAnswer(
+    "🤓 Para continuar con las etapas del proceso escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis2]
+  );
 const flowSustentacionTesis = addKeyword(["1"]).addAnswer(
   [
     "🚀 Indica qué es lo que deseas conocer.",
-    "\n1️⃣ Etapas del proceso de sustentación",
-    "2️⃣ Estado de trámite",
+    "\n1️⃣ Inicio del proceso",
+    "2️⃣ Etapas del proceso de sustentación",
+    "3️⃣ Estado de trámite",
   ],
   null,
   null,
