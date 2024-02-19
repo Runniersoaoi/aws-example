@@ -1,0 +1,1666 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB00B7A99031845D89FA2',
+    participant: undefined
+  },
+  messageTimestamp: 1707403930,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  keyword: 'key_9cd20a14-513b-4dc0-8cef-a9ff185b72ab',
+  answer: '👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f97b3a044b7462d4815403d3a247da6e'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  keyword: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  answer: '🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e19bf9964177ee679e56c879fdb67732'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB097286EF799EA625321',
+    participant: undefined
+  },
+  messageTimestamp: 1707403934,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'n',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'n',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0AE33CE9ED7A5D36879',
+    participant: undefined
+  },
+  messageTimestamp: 1707403937,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '71706694',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '71706694',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4ba100e2-85ae-495e-9cfa-1e8a4c417ba7',
+  keyword: 'key_dc48ee8a-e2df-4d36-9f24-6eca365aa19b',
+  answer: "¡Wow 🤩 ¡Me encanta tu nombre! Vamos a ser muy buenos amigos.','\n" +
+    '🤩 Pero antes de continuar, 🔒 Por favor, tómate un momento para revisar nuestra política de confidencialidad y aceptarla para que podamos continuar con esta increíble experiencia juntos. 😊 https://holamusa.com/politica-de-confidencialidad/\n' +
+    '\n' +
+    '🤓💬 *¿Aceptas nuestra política de confidencialidad?*\n' +
+    '1️⃣ Si\n' +
+    '2️⃣ No',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'bc5ed2f3cba8184071ff8d8c9eb77e01'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0ACFFF570B04BBF39A6',
+    participant: undefined
+  },
+  messageTimestamp: 1707403939,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_fc88e488-4d95-4d7d-aee5-af7d122f4469',
+  keyword: 'key_42aac099-a614-4c9f-9a26-6dd788ea7785',
+  answer: '🤪 Indícame que información desea solicitar:\n' +
+    'Este es mi menú de opciones escribe el número que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ Bachiller\n' +
+    '2️⃣ Título Profesional\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b61f76bf9bfcda2e8cb656729b3c93d3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB05E3A28099DD8E2FD39',
+    participant: undefined
+  },
+  messageTimestamp: 1707403943,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_80c474cb-e267-499f-9ff1-430f86d4066a',
+  keyword: 'key_e1867ba3-a7a3-474c-bf4a-42d5d231a33c',
+  answer: '🤓💬 Selecciona la opción que más se adecue a tu caso\n' +
+    '\n' +
+    '1️⃣ Requisitos que debo cumplir\n' +
+    '2️⃣ Pasos a seguir para realizar el tramite\n' +
+    '3️⃣ Presentación de fotografía\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *3*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'dce2adee13ec59f3394eb3170ebe4f53'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0B538E058C95265D491',
+    participant: undefined
+  },
+  messageTimestamp: 1707403959,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0D9609ABB92BCDFEC41',
+    participant: undefined
+  },
+  messageTimestamp: 1707403961,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  keyword: 'key_9cd20a14-513b-4dc0-8cef-a9ff185b72ab',
+  answer: '👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f97b3a044b7462d4815403d3a247da6e'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  keyword: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  answer: '🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e19bf9964177ee679e56c879fdb67732'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB07AD8B47E6790C4F482',
+    participant: undefined
+  },
+  messageTimestamp: 1707403965,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'm',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'm',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB043BD1D093DDF960D0F',
+    participant: undefined
+  },
+  messageTimestamp: 1707403968,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '71706694',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '71706694',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4ba100e2-85ae-495e-9cfa-1e8a4c417ba7',
+  keyword: 'key_dc48ee8a-e2df-4d36-9f24-6eca365aa19b',
+  answer: "¡Wow 🤩 ¡Me encanta tu nombre! Vamos a ser muy buenos amigos.','\n" +
+    '🤩 Pero antes de continuar, 🔒 Por favor, tómate un momento para revisar nuestra política de confidencialidad y aceptarla para que podamos continuar con esta increíble experiencia juntos. 😊 https://holamusa.com/politica-de-confidencialidad/\n' +
+    '\n' +
+    '🤓💬 *¿Aceptas nuestra política de confidencialidad?*\n' +
+    '1️⃣ Si\n' +
+    '2️⃣ No',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'bc5ed2f3cba8184071ff8d8c9eb77e01'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB082479C39A03DA1C565',
+    participant: undefined
+  },
+  messageTimestamp: 1707403971,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_fc88e488-4d95-4d7d-aee5-af7d122f4469',
+  keyword: 'key_42aac099-a614-4c9f-9a26-6dd788ea7785',
+  answer: '🤪 Indícame que información desea solicitar:\n' +
+    'Este es mi menú de opciones escribe el número que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ Bachiller\n' +
+    '2️⃣ Título Profesional\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b61f76bf9bfcda2e8cb656729b3c93d3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0430A6635347C4C69BD',
+    participant: undefined
+  },
+  messageTimestamp: 1707403975,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_69c06c96-5134-47a3-9342-3ad605c044af',
+  keyword: 'key_3ccc10b9-5a90-421d-b931-29449c912372',
+  answer: '🤓💬 Selecciona la opción que más se adecue a tu caso\n' +
+    '\n' +
+    '1️⃣ Bachiller UC\n' +
+    '2️⃣ Bachiller proveniente de universidad no licenciada\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '787e2fb29739a7c280da9c164518c313'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB074930F90245950321E',
+    participant: undefined
+  },
+  messageTimestamp: 1707403982,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_852d7b95-e111-46e0-8754-4473a872840c',
+  keyword: 'key_8f43bae8-db15-4713-9f45-58064d0092e0',
+  answer: '🤓💬 Selecciona la opción que más se adecue a tu caso\n' +
+    '\n' +
+    '1️⃣ Sustentación de tesis\n' +
+    '2️⃣ Trabajo de suficiencia profesional\n' +
+    '3️⃣ Sustentación de tesis en formato artículo científico\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *3*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'bd875482e76b4f8002c03a7172733e41'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB01F4746FB44E14302F5',
+    participant: undefined
+  },
+  messageTimestamp: 1707403989,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_190d0ab2-2070-441c-ac02-2ecd3d1f0b99',
+  keyword: 'key_c03f7e6a-e64f-44eb-9b77-0bee656e7161',
+  answer: '🚀 Indica qué es lo que deseas conocer.\n' +
+    '\n' +
+    '1️⃣ Pasos a seguir para iniciar el trámite\n' +
+    '2️⃣ Etapas del proceso de sustentación \n' +
+    '3️⃣ Estado de trámite ',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '84ae48619722c2a98069876e3b8611ea'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB06ABE9EA3011CABF990',
+    participant: undefined
+  },
+  messageTimestamp: 1707403994,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_9dd71d08-1932-42ca-866b-c73b03013b8c',
+  keyword: 'key_503d23d8-cff6-475d-83ac-95a4295d09db',
+  answer: 'Enviar pasos en formato de infografía',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e8c4794e1e3ce3733952b8f151c5e717'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0D215A1FCDE9C733487',
+    participant: undefined
+  },
+  messageTimestamp: 1707404006,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  keyword: 'key_9cd20a14-513b-4dc0-8cef-a9ff185b72ab',
+  answer: '👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f97b3a044b7462d4815403d3a247da6e'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB098C094C7FD0D1A7EBC',
+    participant: undefined
+  },
+  messageTimestamp: 1707404007,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  keyword: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  answer: '🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e19bf9964177ee679e56c879fdb67732'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB09BE267B3596ECD716D',
+    participant: undefined
+  },
+  messageTimestamp: 1707404017,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'matias',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'matias',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB020E313F824A8D2A9A5',
+    participant: undefined
+  },
+  messageTimestamp: 1707404020,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB04F691341EB1BC1A8E6',
+    participant: undefined
+  },
+  messageTimestamp: 1707404022,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  keyword: 'key_9cd20a14-513b-4dc0-8cef-a9ff185b72ab',
+  answer: '👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f97b3a044b7462d4815403d3a247da6e'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  keyword: 'key_9cd20a14-513b-4dc0-8cef-a9ff185b72ab',
+  answer: '👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f97b3a044b7462d4815403d3a247da6e'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  keyword: 'key_9cd20a14-513b-4dc0-8cef-a9ff185b72ab',
+  answer: '👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f97b3a044b7462d4815403d3a247da6e'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  keyword: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  answer: '🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e19bf9964177ee679e56c879fdb67732'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  keyword: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  answer: '🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e19bf9964177ee679e56c879fdb67732'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  keyword: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  answer: '🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e19bf9964177ee679e56c879fdb67732'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0A87FC4F45CD742B025',
+    participant: undefined
+  },
+  messageTimestamp: 1707404031,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'xd',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'xd',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0332DA7876945995C16',
+    participant: undefined
+  },
+  messageTimestamp: 1707404038,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '71706694',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '71706694',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4ba100e2-85ae-495e-9cfa-1e8a4c417ba7',
+  keyword: 'key_dc48ee8a-e2df-4d36-9f24-6eca365aa19b',
+  answer: "¡Wow 🤩 ¡Me encanta tu nombre! Vamos a ser muy buenos amigos.','\n" +
+    '🤩 Pero antes de continuar, 🔒 Por favor, tómate un momento para revisar nuestra política de confidencialidad y aceptarla para que podamos continuar con esta increíble experiencia juntos. 😊 https://holamusa.com/politica-de-confidencialidad/\n' +
+    '\n' +
+    '🤓💬 *¿Aceptas nuestra política de confidencialidad?*\n' +
+    '1️⃣ Si\n' +
+    '2️⃣ No',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'bc5ed2f3cba8184071ff8d8c9eb77e01'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB09696240A3A086C1660',
+    participant: undefined
+  },
+  messageTimestamp: 1707404041,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_fc88e488-4d95-4d7d-aee5-af7d122f4469',
+  keyword: 'key_42aac099-a614-4c9f-9a26-6dd788ea7785',
+  answer: '🤪 Indícame que información desea solicitar:\n' +
+    'Este es mi menú de opciones escribe el número que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ Bachiller\n' +
+    '2️⃣ Título Profesional\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b61f76bf9bfcda2e8cb656729b3c93d3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB00384D4CA7EDF3BD6D2',
+    participant: undefined
+  },
+  messageTimestamp: 1707404045,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '3',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '3',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0A2DA0F0AC25B54BE8C',
+    participant: undefined
+  },
+  messageTimestamp: 1707404055,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  keyword: 'key_9cd20a14-513b-4dc0-8cef-a9ff185b72ab',
+  answer: '👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f97b3a044b7462d4815403d3a247da6e'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  keyword: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  answer: '🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e19bf9964177ee679e56c879fdb67732'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB01D9F1DE7C697B10899',
+    participant: undefined
+  },
+  messageTimestamp: 1707404059,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'matias',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'matias',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB09BC3C51A2A0F8545CB',
+    participant: undefined
+  },
+  messageTimestamp: 1707404063,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '71706694',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '71706694',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4ba100e2-85ae-495e-9cfa-1e8a4c417ba7',
+  keyword: 'key_dc48ee8a-e2df-4d36-9f24-6eca365aa19b',
+  answer: "¡Wow 🤩 ¡Me encanta tu nombre! Vamos a ser muy buenos amigos.','\n" +
+    '🤩 Pero antes de continuar, 🔒 Por favor, tómate un momento para revisar nuestra política de confidencialidad y aceptarla para que podamos continuar con esta increíble experiencia juntos. 😊 https://holamusa.com/politica-de-confidencialidad/\n' +
+    '\n' +
+    '🤓💬 *¿Aceptas nuestra política de confidencialidad?*\n' +
+    '1️⃣ Si\n' +
+    '2️⃣ No',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'bc5ed2f3cba8184071ff8d8c9eb77e01'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB02009A04CA47B600079',
+    participant: undefined
+  },
+  messageTimestamp: 1707404066,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_fc88e488-4d95-4d7d-aee5-af7d122f4469',
+  keyword: 'key_42aac099-a614-4c9f-9a26-6dd788ea7785',
+  answer: '🤪 Indícame que información desea solicitar:\n' +
+    'Este es mi menú de opciones escribe el número que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ Bachiller\n' +
+    '2️⃣ Título Profesional\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b61f76bf9bfcda2e8cb656729b3c93d3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB03B525CF1AF578A6923',
+    participant: undefined
+  },
+  messageTimestamp: 1707404071,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_69c06c96-5134-47a3-9342-3ad605c044af',
+  keyword: 'key_3ccc10b9-5a90-421d-b931-29449c912372',
+  answer: '🤓💬 Selecciona la opción que más se adecue a tu caso\n' +
+    '\n' +
+    '1️⃣ Bachiller UC\n' +
+    '2️⃣ Bachiller proveniente de universidad no licenciada\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '787e2fb29739a7c280da9c164518c313'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB07D9EE3CC12B6FFC406',
+    participant: undefined
+  },
+  messageTimestamp: 1707404076,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_bf8c4a95-bb70-4810-8341-17ee66ba675a',
+  keyword: 'key_72c0a62f-92ae-4fd3-aeac-eaa74eef3dee',
+  answer: 'Información por añadir',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'b9a25a5105312f7fe9892b0385f7cd70'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0F4DEA64F3FE0B98F9C',
+    participant: undefined
+  },
+  messageTimestamp: 1707404083,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'xd',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'xd',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB01B0BEBFDF13D14A460',
+    participant: undefined
+  },
+  messageTimestamp: 1707404085,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  keyword: 'key_9cd20a14-513b-4dc0-8cef-a9ff185b72ab',
+  answer: '👋¡Hola! Este es el WhatsApp oficial de la oficina de grados y títulos UC ✅',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f97b3a044b7462d4815403d3a247da6e'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  keyword: 'ans_27fcd85b-b0d5-45f8-8d62-95546dd87966',
+  answer: '🤗 Soy Birretito, tu asistente virtual, y te apoyaré en tus consultas sobre los trámites de bachiller y título profesional.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'e19bf9964177ee679e56c879fdb67732'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_08e02f4b-fdba-4a04-bf2a-3c426896ecc3',
+  keyword: 'ans_379c0024-b583-4ccb-a8e6-07f957bc3293',
+  answer: 'Me encantaría saber cómo te llamas para dirigirme a ti de manera adecuada. 👀 ¡No te preocupes, no compartiré tu información con nadie más!. \n' +
+    '\n' +
+    '🤗 *Para continuar proporcioname tu primer nombre en un solo mensaje:*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '4c99bbd8c5dd78c8a9bd14b65632ae59'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0B58501C59B0D311E47',
+    participant: undefined
+  },
+  messageTimestamp: 1707404089,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: 'matias',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'matias',
+  from: '51947434987'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0221F6AFEF048592E51',
+    participant: undefined
+  },
+  messageTimestamp: 1707404093,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '71706694',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '71706694',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4ba100e2-85ae-495e-9cfa-1e8a4c417ba7',
+  keyword: 'key_dc48ee8a-e2df-4d36-9f24-6eca365aa19b',
+  answer: "¡Wow 🤩 ¡Me encanta tu nombre! Vamos a ser muy buenos amigos.','\n" +
+    '🤩 Pero antes de continuar, 🔒 Por favor, tómate un momento para revisar nuestra política de confidencialidad y aceptarla para que podamos continuar con esta increíble experiencia juntos. 😊 https://holamusa.com/politica-de-confidencialidad/\n' +
+    '\n' +
+    '🤓💬 *¿Aceptas nuestra política de confidencialidad?*\n' +
+    '1️⃣ Si\n' +
+    '2️⃣ No',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'bc5ed2f3cba8184071ff8d8c9eb77e01'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0B96977B6E28F1EA143',
+    participant: undefined
+  },
+  messageTimestamp: 1707404100,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_fc88e488-4d95-4d7d-aee5-af7d122f4469',
+  keyword: 'key_42aac099-a614-4c9f-9a26-6dd788ea7785',
+  answer: '🤪 Indícame que información desea solicitar:\n' +
+    'Este es mi menú de opciones escribe el número que deseas consultar:\n' +
+    '\n' +
+    '1️⃣ Bachiller\n' +
+    '2️⃣ Título Profesional\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b61f76bf9bfcda2e8cb656729b3c93d3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB08C671235E8F2791ED9',
+    participant: undefined
+  },
+  messageTimestamp: 1707404103,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_69c06c96-5134-47a3-9342-3ad605c044af',
+  keyword: 'key_3ccc10b9-5a90-421d-b931-29449c912372',
+  answer: '🤓💬 Selecciona la opción que más se adecue a tu caso\n' +
+    '\n' +
+    '1️⃣ Bachiller UC\n' +
+    '2️⃣ Bachiller proveniente de universidad no licenciada\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *2*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '787e2fb29739a7c280da9c164518c313'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0398C5DEC852749C379',
+    participant: undefined
+  },
+  messageTimestamp: 1707404105,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_852d7b95-e111-46e0-8754-4473a872840c',
+  keyword: 'key_8f43bae8-db15-4713-9f45-58064d0092e0',
+  answer: '🤓💬 Selecciona la opción que más se adecue a tu caso\n' +
+    '\n' +
+    '1️⃣ Sustentación de tesis\n' +
+    '2️⃣ Trabajo de suficiencia profesional\n' +
+    '3️⃣ Sustentación de tesis en formato artículo científico\n' +
+    '\n' +
+    '✍️ *Escribe* *un* *número* *entre* *1* *y* *3*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'bd875482e76b4f8002c03a7172733e41'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51947434987@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB091755EF38FFF0B9FB4',
+    participant: undefined
+  },
+  messageTimestamp: 1707404107,
+  pushName: 'Matias',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '51947434987'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_9776e3a0-cf8a-4a79-8673-c19304c8fc67',
+  keyword: 'key_46ae278d-ee30-4608-bca1-87d53586fe84',
+  answer: 'Información por añadir',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'dfa6d4782ede7d203cdcdba06d9d0c49'
+}
