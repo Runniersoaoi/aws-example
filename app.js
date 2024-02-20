@@ -11,9 +11,6 @@ const { EVENTS } = require("@bot-whatsapp/bot");
 const REGEX_CREDIT_NUMBER = /^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$/u;
 const EXPRESION_DNI = `/^[0-9]{7,8}[0-9K]$/`;
 let nomUsuario = "";
-/**
- * Declaramos las conexiones de Mongo
- */
 
 const MONGO_DB_URI =
   "mongodb+srv://admin:a1kmpBlObLMx1x1g@cluster0.i0qjngd.mongodb.net/?retryWrites=true&w=majority";
@@ -307,8 +304,8 @@ const flowBachiller = addKeyword(["1"])
   .addAnswer(
     [
       "¿Cumples con todos los requisitos?",
-      "\n1️⃣ No",
-      "2️⃣ Si",
+      "\n1️⃣ Si",
+      "2️⃣ No",
       "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*",
     ],
     null,
@@ -329,169 +326,193 @@ const flowMenuBachiller = addKeyword(["1"]).addAnswer(
   [flowBachiller, flowRequisitosCumplidosBachiller, flowFotografia]
 );
 
-const flowSustentacionTesis21 = addKeyword(["1"]).addAnswer(
-  [
-    "🚀 Para iniciar con el proceso usted:",
-    "\n1️⃣ Debe ser estudiante de último semestre, egresado o bachiller.",
-    "2️⃣ Debe tener una propuesta de plan de tesis",
-    "3️⃣ Debe haber realizado el pago por trámites administrativos de la modalidad",
-    "El trámite se realiza a través del portal del estudiante en el siguiente enlace",
-    "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace.",
-  ],
-  null,
-  null
-);
+const flowSustentacionTesis251 = addKeyword(["1"]).addAnswer([
+  "🚀 El trámite se realiza siempre en cuando ya esté inscrito tu plan de tesis. Estos son los requisitos para realizar la modificación de título:",
+  "1️⃣ Informe detallado de los motivos de la modificación de título emitido por el asesor",
+  "2️⃣ Nuevo plan de tesis en formato digital",
+  "3️⃣ Realizar el pago por el concepto de trámite de titulación",
+  "\n Has llegado al final del diálogo, si deseas consultar algo más porfavor escribe *hola*",
+]);
+const flowSustentacionTesis252 = addKeyword(["2"]).addAnswer([
+  "🚀 El trámite se realiza cuando el plazo de 12 meses para finalizar el borrador de tesis está por terminar. Estos son los requisitos para realizar una ampliación de plazo:",
+  "1️⃣ Informe detallado de los motivos de la ampliación del plazo emitido por el asesor",
+  "2️⃣ Nuevo plan de tesis en formato digital",
+  "3️⃣ Realizar el pago por el concepto de trámite de titulación",
+  "\n Has llegado al final del diálogo, si deseas consultar algo más porfavor escribe *hola*",
+]);
+const flowSustentacionTesis253 = addKeyword(["3"]).addAnswer([
+  "🚀 El trámite se realiza una vez se haya designado al asesor hasta antes de solicitar fecha y hora de sustentación. Estos son los requisitos para realizar el cambio de asesor:",
+  "1️⃣ Informe detallando los motivos de la culminación del asesoramiento emitido por el antiguo asesor",
+  "2️⃣ Realizar el pago por el concepto de trámite de titulación",
+  "_Si usted a propuesto a un asesor. La universidad le proporcionará una lista de asesores._",
+  "_Si no propone asesor: La facultad designará un asesor de acuerdo con el área y línea de investigación._",
+  "\n Has llegado al final del diálogo, si deseas consultar algo más porfavor escribe *hola*",
+]);
+const flowSustentacionTesis254 = addKeyword(["4"]).addAnswer([
+  "🚀 El trámite se realiza una vez se haya designado los jurados revisores hasta antes de solicitar fecha y hora de sustentación. Estos son los requisitos para realizar el cambio de jurado revisor:",
+  "1️⃣ Informe detallando los motivos de la solicitud de cambio de jurado revisor emitido por el asesor. ",
+  "2️⃣ Realizar el pago por el concepto de trámite de titulación",
+  "\n Has llegado al final del diálogo, si deseas consultar algo más porfavor escribe *hola*",
+]);
+const flowSustentacionTesis255 = addKeyword(["5"]).addAnswer([
+  "🚀 El trámite se realiza si el estudiante  desaprobó la sustentación de tesis y tiene como plazo máximo 30 días para solicitar una nueva oportunidad. Estos son los requisitos para volver a solicitar una nueva oportunidad de sustentación:",
+  "1️⃣ Generar la solicitud por el sistema de titulación",
+  "\n Has llegado al final del diálogo, si deseas consultar algo más porfavor escribe *hola*",
+]);
+const flowSustentacionTesis256 = addKeyword(["6"]).addAnswer([
+  "🚀 El trámite se realiza en cualquier momento una vez iniciado el proceso de titulación por tesis. Estos son los requisitos para  realizar una renuncia o cambio de modalidad de titulación",
+  "1️⃣ Informe detallando los motivos de la culminación del asesoramiento emitidos por el asesor y por el estudiante",
+  "\n Has llegado al final del diálogo, si deseas consultar algo más porfavor escribe *hola*",
+]);
 
-const flowSustentacionTesis22Ingenieria = addKeyword(["1"]).addAnswer(
-  [
-    "💬 Para inscribir su plan de tesis usted contar con:",
-    "\n1️⃣ El informe de conformidad de plan de tesis emitido por el asesor",
-    "2️⃣ El plan de tesis",
-    "_Para mayor información sobre el proceso del comité de ética dirija sus consultas a (correo: )_",
-  ],
-  null,
-  null
-);
-
-const flowSustentacionTesis22CienciasEmpresariales = addKeyword([
-  "2",
+const flowSustentacionTesis25 = addKeyword([
+  "5",
+  "continuar",
+  "Continuar",
 ]).addAnswer(
   [
-    "💬 Para inscribir su plan de tesis usted contar con:",
-    "\n1️⃣ El informe de conformidad de plan de tesis emitido por el asesor",
-    "2️⃣ El plan de tesis",
-    "_Para mayor información sobre el proceso del comité de ética dirija sus consultas a (correo: )_",
+    "🚀 Estos son algunos trámites adicionales que se pueden realizar, selecciona alguno de ellos para saber los requisitos que tienen.",
+    "\n1️⃣ Modificación de titulo.",
+    "2️⃣ Ampliación de plazo",
+    "3️⃣ Cambio de asesor",
+    "4️⃣ Cambio de jurado revisor",
+    "5️⃣ Desaprobación de sustentación",
+    "6️⃣ Renuncia o cambio de modalidad de titulación",
+    "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *6*",
   ],
   null,
-  null
-);
-
-const flowSustentacionTesis22CienciasSalud = addKeyword(["3"]).addAnswer(
-  [
-    "💬 Para inscribir su plan de tesis usted contar con:",
-    "\n1️⃣ Tener en un archivo adjunto el informe de conformidad de plan de tesis y el informe de aprobación del comité de ética en investigación",
-    "2️⃣ El plan de tesis",
-    "_Para mayor información sobre el proceso del comité de ética dirija sus consultas a (correo: )_",
-  ],
   null,
-  null
+  [
+    flowSustentacionTesis251,
+    flowSustentacionTesis252,
+    flowSustentacionTesis253,
+    flowSustentacionTesis254,
+    flowSustentacionTesis255,
+    flowSustentacionTesis256,
+  ]
 );
 
-const flowSustentacionTesis22DerechoHumanidades = addKeyword(["4"]).addAnswer(
-  [
-    "💬 Para inscribir su plan de tesis usted contar con:",
-    "\n1️⃣ Tener en un archivo adjunto el informe de conformidad de plan de tesis, la rúbrica emitida por el asesor y el informe de aprobación del comité de ética en investigación",
-    "2️⃣ El plan de tesis",
-    "_Para mayor información sobre el proceso del comité de ética dirija sus consultas a (correo: )_",
-  ],
-  null,
-  null
-);
+const flowSustentacionTesis24Ingenieria = addKeyword([
+  "1",
+  "continuar",
+  "Continuar",
+])
+  .addAnswer(
+    [
+      "💬 Para poder realizar la sustentación de tesis usted contar con:",
+      "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
+      "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
+      "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
+      "4️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
+      "5️⃣ La declaración jurada de autenticidad",
+      "6️⃣ La autorización para publicación de la tesis en el repositorio digital suscrito por el estudiante",
+      "7️⃣ La tesis en formato digital (.PDF)",
+      '8️⃣ El resultado de la tesis "Turnitin" emitido por el asesor',
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis25]
+  );
 
-const flowSustentacionTesis22 = addKeyword(["2"]).addAnswer(
+const flowSustentacionTesis24CienciasEmpresariales = addKeyword([
+  "2",
+  "continuar",
+  "Continuar",
+])
+  .addAnswer(
+    [
+      "💬 Para poder realizar la sustentación de tesis usted contar con:",
+      "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
+      "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
+      "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
+      "4️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
+      "5️⃣ La declaración jurada de autenticidad",
+      "6️⃣ La autorización para publicación de la tesis en el repositorio digital suscrito por el estudiante",
+      "7️⃣ La tesis en formato digital (.PDF)",
+      '8️⃣ El resultado de la tesis "Turnitin" emitido por el asesor',
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis25]
+  );
+
+const flowSustentacionTesis24CienciasSalud = addKeyword([
+  "3",
+  "continuar",
+  "Continuar",
+])
+  .addAnswer(
+    [
+      "💬 Para poder realizar la sustentación de tesis usted contar con:",
+      "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
+      "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
+      "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
+      "4️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
+      "5️⃣ La declaración jurada de autenticidad",
+      "6️⃣ La autorización para publicación de la tesis en el repositorio digital suscrito por el estudiante",
+      "7️⃣ La tesis en formato digital (.PDF)",
+      '8️⃣ El resultado de la tesis "Turnitin" emitido por el asesor',
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis25]
+  );
+
+const flowSustentacionTesis24DerechoHumanidades = addKeyword([
+  "4",
+  "continuar",
+  "Continuar",
+])
+  .addAnswer(
+    [
+      "💬 Para poder realizar la sustentación de tesis usted contar con:",
+      "\n1️⃣ El archivo adjunto de el informe de conformidad de tesis y la rúbrica emitida por el asesor ",
+      "2️⃣ El archivo adjunto de el informe de conformidad de tesis y la rúbrica emitida por cada jurado revisor ",
+      "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
+      "4️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
+      "5️⃣ La declaración jurada de autenticidad",
+      "6️⃣ La autorización para publicación de la tesis en el repositorio digital suscrito por el estudiante",
+      "7️⃣ La tesis en formato digital (.PDF)",
+      '8️⃣ El resultado de la tesis "Turnitin" emitido por el asesor',
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis25]
+  );
+
+const flowSustentacionTesis24 = addKeyword([
+  "4",
+  "continuar",
+  "Continuar",
+]).addAnswer(
   [
-    "💬 Desde la designación de asesor usted cuenta con 30 días como máximo para inscribir su plan de tesis.",
-    "🚀 Para continuar elecciona tu facultad:", // selecciona
+    "💬 Se recomienda tener la conformidad de los tres jurados revisores, sin embargo si usted cuenta con la conformidad de dos ya puede iniciar con el trámite de sustentación.",
+    "🚀 Para continuar elecciona tu facultad:",
     "\n1️⃣ Ingeniería",
     "2️⃣ Ciencias de la empresa",
     "3️⃣ Ciencias de la salud",
     "4️⃣ Derecho y humanidades",
-  ],
-  null,
-  null,
-  [
-    flowSustentacionTesis22Ingenieria,
-    flowSustentacionTesis22CienciasEmpresariales,
-    flowSustentacionTesis22CienciasSalud,
-    flowSustentacionTesis22DerechoHumanidades,
-  ]
-);
-
-const flowSustentacionTesis23 = addKeyword(["3"]).addAnswer(
-  [
-    "💬 Desde la inscripción de plan de tesis usted cuenta con un plazo máximo de 12 meses para solicitar la designación de jurados revisores.",
-    "🚀 Para iniciar con el proceso usted debe presentar:",
-    "\n1️⃣ El informe de conformidad de borrador de tesis emitido por el asesor.",
-    "2️⃣ El borrador de tesis en formato digital PDF",
-  ],
-  null,
-  null
-);
-
-const flowSustentacionTesis24Ingenieria = addKeyword(["1"]).addAnswer(
-  [
-    "💬 Para poder realizar la sustentación de tesis usted contar con:",
-    "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
-    "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
-    "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
-    "4️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
-    "5️⃣ La declaración jurada de autenticidad",
-    "6️⃣ La autorización para publicación de la tesis en el repositorio digital suscrito por el estudiante",
-    "7️⃣ La tesis en formato digital (.PDF)",
-    '8️⃣ El resultado de la tesis "Turnitin" emitido por el asesor',
-  ],
-  null,
-  null
-);
-
-const flowSustentacionTesis24CienciasEmpresariales = addKeyword([
-  "2",
-]).addAnswer(
-  [
-    "💬 Para poder realizar la sustentación de tesis usted contar con:",
-    "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
-    "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
-    "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
-    "4️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
-    "5️⃣ La declaración jurada de autenticidad",
-    "6️⃣ La autorización para publicación de la tesis en el repositorio digital suscrito por el estudiante",
-    "7️⃣ La tesis en formato digital (.PDF)",
-    '8️⃣ El resultado de la tesis "Turnitin" emitido por el asesor',
-  ],
-  null,
-  null
-);
-
-const flowSustentacionTesis24CienciasSalud = addKeyword(["3"]).addAnswer(
-  [
-    "💬 Para poder realizar la sustentación de tesis usted contar con:",
-    "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
-    "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
-    "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
-    "4️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
-    "5️⃣ La declaración jurada de autenticidad",
-    "6️⃣ La autorización para publicación de la tesis en el repositorio digital suscrito por el estudiante",
-    "7️⃣ La tesis en formato digital (.PDF)",
-    '8️⃣ El resultado de la tesis "Turnitin" emitido por el asesor',
-  ],
-  null,
-  null
-);
-
-const flowSustentacionTesis24DerechoHumanidades = addKeyword(["4"]).addAnswer(
-  [
-    "💬 Para poder realizar la sustentación de tesis usted contar con:",
-    "\n1️⃣ El archivo adjunto de el informe de conformidad de tesis y la rúbrica emitida por el asesor ",
-    "2️⃣ El archivo adjunto de el informe de conformidad de tesis y la rúbrica emitida por cada jurado revisor ",
-    "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
-    "4️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
-    "5️⃣ La declaración jurada de autenticidad",
-    "6️⃣ La autorización para publicación de la tesis en el repositorio digital suscrito por el estudiante",
-    "7️⃣ La tesis en formato digital (.PDF)",
-    '8️⃣ El resultado de la tesis "Turnitin" emitido por el asesor',
-  ],
-  null,
-  null
-);
-
-const flowSustentacionTesis24 = addKeyword(["4"]).addAnswer(
-  [
-    "💬 Se recomienda tener la conformidad de los tres jurados revisores, sin embargo si usted cuenta con la conformidad de dos ya puede iniciar con el trámite de sustentación.",
-    "🚀 Para continuar elecciona tu facultad:", // SELECCIONA
-    "\n1️⃣ Ingeniería",
-    "2️⃣ Ciencias de la empresa",
-    "3️⃣ Ciencias de la salud",
-    "4️⃣ Derecho y humanidades", // MAYUSCULA HUMINIDADES
+    "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *4*",
   ],
   null,
   null,
@@ -503,19 +524,166 @@ const flowSustentacionTesis24 = addKeyword(["4"]).addAnswer(
   ]
 );
 
-const flowSustentacionTesis25 = addKeyword(["5"]).addAnswer(
+const flowSustentacionTesis23 = addKeyword(["3", "continuar", "Continuar"])
+  .addAnswer(
+    [
+      "💬 Desde la inscripción de plan de tesis cuentas con un plazo máximo de 12 meses para solicitar la designación de jurados revisores.",
+      "🚀 Para iniciar con el proceso usted debe presentar:",
+      "\n1️⃣ El informe de conformidad de borrador de tesis emitido por el asesor.",
+      "2️⃣ El borrador de tesis en formato digital PDF",
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis24]
+  );
+
+const flowSustentacionTesis3 = addKeyword(["3"]).addAnswer(
   [
-    "🚀 Estos son algunos trámites adicionales que se pueden realizar",
-    "\n1️⃣ Modificación de titulo. (_El trámite se realiza siempre en cuando se haya inscrito el plan de tesis_)",
-    "2️⃣ Ampliación de plazo",
-    "3️⃣ Cambio de asesor",
-    "4️⃣ Cambio de jurado revisor",
-    "5️⃣ Desaprobación de sustentación",
-    "6️⃣ Renuncia o cambio de modalidad de titulación",
+    "🤓💬 Indica qué etapa te gustaría consultar.",
+    "\n1️⃣ Designación de asesor",
+    "2️⃣ Inscripción de plan de tesis",
+    "3️⃣ Designación de jurados revisores",
+    "4️⃣ Sustentación de tesis",
+    "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *4*",
   ],
   null,
   null
 );
+
+const flowSustentacionTesis22Ingenieria = addKeyword([
+  "1",
+  "continuar",
+  "Continuar",
+])
+  .addAnswer(
+    [
+      "💬 Para inscribir su plan de tesis usted contar con:",
+      "\n1️⃣ El informe de conformidad de plan de tesis emitido por el asesor",
+      "2️⃣ El plan de tesis",
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis23]
+  );
+
+const flowSustentacionTesis22CienciasEmpresariales = addKeyword([
+  "2",
+  "continuar",
+  "Continuar",
+])
+  .addAnswer(
+    [
+      "💬 Para inscribir tu plan de tesis debes contar con:",
+      "\n1️⃣ El informe de conformidad de plan de tesis emitido por el asesor",
+      "2️⃣ El plan de tesis",
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis23]
+  );
+
+const flowSustentacionTesis22CienciasSalud = addKeyword([
+  "3",
+  "continuar",
+  "Continuar",
+])
+  .addAnswer(
+    [
+      "💬 Para inscribir tu plan de tesis debes contar con:",
+      "\n1️⃣ Tener en un archivo adjunto el informe de conformidad de plan de tesis y el informe de aprobación del comité de ética en investigación",
+      "2️⃣ El plan de tesis",
+      "\n_Para mayor información sobre el proceso del comité de ética dirija sus consultas a_ eticainvestigacion@continental.edu.pe",
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis23]
+  );
+
+const flowSustentacionTesis22DerechoHumanidades = addKeyword([
+  "4",
+  "continuar",
+  "Continuar",
+])
+  .addAnswer(
+    [
+      "💬 Para inscribir tu plan de tesis debes contar con:",
+      "\n1️⃣ Tener en un archivo adjunto el informe de conformidad de plan de tesis, la rúbrica emitida por el asesor y el informe de aprobación del comité de ética en investigación",
+      "2️⃣ El plan de tesis",
+      "\n_Para mayor información sobre el proceso del comité de ética dirija sus consultas a_ eticainvestigacion@continental.edu.pe",
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis23]
+  );
+
+const flowSustentacionTesis22 = addKeyword([
+  "2",
+  "continuar",
+  "Continuar",
+]).addAnswer(
+  [
+    "💬 Desde la designación de asesor cuentas con 30 días como máximo para inscribir su plan de tesis.",
+    "🚀 Para continuar selecciona tu facultad:",
+    "\n1️⃣ Ingeniería",
+    "2️⃣ Ciencias de la empresa",
+    "3️⃣ Ciencias de la salud",
+    "4️⃣ Derecho y humanidades",
+    "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *4*",
+  ],
+  null,
+  null,
+  [
+    flowSustentacionTesis22Ingenieria,
+    flowSustentacionTesis22CienciasEmpresariales,
+    flowSustentacionTesis22CienciasSalud,
+    flowSustentacionTesis22DerechoHumanidades,
+  ]
+);
+
+const flowSustentacionTesis21 = addKeyword(["1", "continuar", "Continuar"])
+  .addAnswer(
+    [
+      "🚀 Para iniciar con el proceso usted:",
+      "\n1️⃣ Debe ser estudiante de último semestre, egresado o bachiller.",
+      "2️⃣ Debe tener una propuesta de plan de tesis",
+      "3️⃣ Debe haber realizado el pago por trámites administrativos de la modalidad",
+      "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace",
+      "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace.",
+    ],
+    null,
+    null
+  )
+  .addAnswer(
+    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    null,
+    null,
+    [flowSustentacionTesis22]
+  );
 
 const flowSustentacionTesis2 = addKeyword([
   "2",
@@ -523,12 +691,13 @@ const flowSustentacionTesis2 = addKeyword([
   "Continuar",
 ]).addAnswer(
   [
-    "🤓💬 Estas son las etapas del proceso de sustentación. Indica en qué etapa te encuentras.",
+    "🤓💬 A continuación visualizarás las etapas de sustentación de tesis, selecciona la etapa que deseas conocer:",
     "\n1️⃣ Designación de asesor",
     "2️⃣ Inscripción de plan de tesis",
     "3️⃣ Designación de jurados revisores",
     "4️⃣ Sustentación de tesis",
     "5️⃣ Trámites adicionales",
+    "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *5*",
   ],
   null,
   null,
@@ -541,17 +710,6 @@ const flowSustentacionTesis2 = addKeyword([
   ]
 );
 
-const flowSustentacionTesis3 = addKeyword(["3"]).addAnswer(
-  [
-    "🤓💬 Indica qué etapa te gustaría consultar.",
-    "\n1️⃣ Designación de asesor",
-    "2️⃣ Inscripción de plan de tesis",
-    "3️⃣ Designación de jurados revisores",
-    "4️⃣ Sustentación de tesis",
-  ],
-  null,
-  null
-);
 const flowSustentacionTesis1 = addKeyword(["1"])
   .addAnswer("🖊️ Revisa los pasos para iniciar", {
     media:
@@ -594,10 +752,11 @@ const flowArticuloCientificoEtapa2 = addKeyword(["continuar", "2"]).addAnswer(
 
 const flowSustentacionTesis = addKeyword(["1"]).addAnswer(
   [
-    "🚀 Indica qué es lo que deseas conocer.",
+    "🚀 Selecciona la opción que deseas conocer:",
     "\n1️⃣ Inicio del proceso",
     "2️⃣ Etapas del proceso de sustentación",
     "3️⃣ Estado de trámite",
+    "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *3*",
   ],
   null,
   null,
