@@ -367,8 +367,8 @@ const flowSustentacionTesis253 = addKeyword(["3"]).addAnswer([
   "🚀 El trámite se realiza una vez se haya designado al asesor hasta antes de solicitar fecha y hora de sustentación. Estos son los requisitos para realizar el cambio de asesor:",
   "1️⃣ Informe detallando los motivos de la culminación del asesoramiento emitido por el antiguo asesor",
   "2️⃣ Realizar el pago por el concepto de trámite de titulación",
-  "_Si usted a propuesto a un asesor. La universidad le proporcionará una lista de asesores._",
-  "_Si no propone asesor: La facultad designará un asesor de acuerdo con el área y línea de investigación._",
+  "\nSi tú has propuesto a un asesor. La universidad le proporcionará una lista de asesores.",
+  "Si no propone asesor: La facultad designará un asesor de acuerdo con el área y línea de investigación.",
   "\n Has llegado al final del diálogo, si deseas consultar algo más porfavor escribe *menu* para volver al menú principal",
 ]);
 const flowSustentacionTesis254 = addKeyword(["4"]).addAnswer([
@@ -390,7 +390,7 @@ const flowSustentacionTesis256 = addKeyword(["6"]).addAnswer([
 
 const flowSustentacionTesis25 = addKeyword(["3"]).addAnswer(
   [
-    "🚀 Estos son algunos trámites adicionales que se pueden realizar, selecciona alguno de ellos para saber los requisitos que tienen.",
+    "🚀 Estos son algunos trámite adicionales que pueden realizar, seleccione la opción que mas se adecue a su caso.",
     "\n1️⃣ Modificación de titulo.",
     "2️⃣ Ampliación de plazo",
     "3️⃣ Cambio de asesor",
@@ -418,7 +418,7 @@ const flowSustentacionTesis24Ingenieria = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para poder realizar la sustentación de tesis usted contar con:",
+      "💬 Para poder realizar la sustentación de tesis tú debes contar con:",
       "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
       "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
       "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
@@ -445,7 +445,7 @@ const flowSustentacionTesis24CienciasEmpresariales = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para poder realizar la sustentación de tesis usted contar con:",
+      "💬 Para poder realizar la sustentación de tesis tú debes contar con:",
       "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
       "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
       "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
@@ -472,7 +472,7 @@ const flowSustentacionTesis24CienciasSalud = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para poder realizar la sustentación de tesis usted contar con:",
+      "💬 Para poder realizar la sustentación de tesis tú debes contar con:",
       "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
       "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
       "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
@@ -499,7 +499,7 @@ const flowSustentacionTesis24DerechoHumanidades = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para poder realizar la sustentación de tesis usted contar con:",
+      "💬 Para poder realizar la sustentación de tesis tú debes contar con:",
       "\n1️⃣ El archivo adjunto de el informe de conformidad de tesis y la rúbrica emitida por el asesor ",
       "2️⃣ El archivo adjunto de el informe de conformidad de tesis y la rúbrica emitida por cada jurado revisor ",
       "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
@@ -526,7 +526,7 @@ const flowSustentacionTesis24 = addKeyword([
 ]).addAnswer(
   [
     "*Etapa 4: Sustentación de tesis*",
-    "\n💬 Se recomienda tener la conformidad de los tres jurados revisores, sin embargo si usted cuenta con la conformidad de dos ya puede iniciar con el trámite de sustentación.",
+    "\n💬 Se recomienda tener la conformidad de los tres jurados revisores, sin embargo si tú cuentas con la conformidad de dos ya puede iniciar con el trámite de sustentación.",
     "🚀 Para continuar elecciona tu facultad:",
     "\n1️⃣ Ingeniería",
     "2️⃣ Ciencias de la empresa",
@@ -549,9 +549,9 @@ const flowSustentacionTesis23 = addKeyword(["3", "continuar", "Continuar"])
     [
       "*Etapa 3: Designación de jurados revisores*",
       "\n💬 Desde la inscripción de plan de tesis cuentas con un plazo máximo de 12 meses para solicitar la designación de jurados revisores.",
-      "🚀 Para iniciar con el proceso usted debe presentar:",
+      "🚀 Para iniciar con el proceso tú debes presentar:",
       "\n1️⃣ El informe de conformidad de borrador de tesis emitido por el asesor.",
-      "2️⃣ El borrador de tesis en formato digital PDF",
+      "2️⃣ El borrador de tesis aprobado por el asesor en formato digital",
     ],
     null,
     null
@@ -583,7 +583,7 @@ const flowSustentacionTesis22Ingenieria = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para inscribir su plan de tesis usted contar con:",
+      "💬 Para inscribir su plan de tesis tú debes contar con:",
       "\n1️⃣ El informe de conformidad de plan de tesis emitido por el asesor",
       "2️⃣ El plan de tesis",
     ],
@@ -691,12 +691,12 @@ const flowSustentacionTesis21 = addKeyword(["1", "continuar", "Continuar"])
   .addAnswer(
     [
       "*Etapa 1: Designación de asesor*",
-      "\n🚀 Para iniciar con el proceso usted:",
-      "\n1️⃣ Debe ser estudiante de último semestre, egresado o bachiller.",
-      "2️⃣ Debe tener una propuesta de plan de tesis",
-      "3️⃣ Debe haber realizado el pago por trámites administrativos de la modalidad",
-      "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace",
-      "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace.",
+      "\n🚀 Para iniciar con el proceso tú:",
+      "\n1️⃣ Debes ser estudiante de último semestre, egresado o bachiller.",
+      "2️⃣ Debes tener una propuesta de plan de tesis",
+      "3️⃣ Debes haber realizado el pago por trámites administrativos de la modalidad",
+      "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://estudiantes.continental.edu.pe/ingresa* ",
+      "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/TitulacionTesis-UC* ",
     ],
     null,
     null
@@ -737,6 +737,13 @@ const flowSustentacionTesis1 = addKeyword(["1", "si"])
       "https://github.com/Runniersoaoi/aws-example/blob/titulacion/img/Infografias%20Bot%20Wsp%20UC.png?raw=true", //'c:\ruta\imagen.png'
   })
   .addAnswer(
+    "🎯🚀 Estupendo ahora te comparto las tasas económicas correspondientes a titulación por sustentación de tesis.",
+    {
+      media:
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20sustentacion.png?raw=true", //'c:\ruta\imagen.png'
+    }
+  )
+  .addAnswer(
     "🤓 Para continuar con las etapas del proceso escribe *continuar*",
     null,
     null,
@@ -753,7 +760,7 @@ const flowArticuloCientificoEtapasNo = addKeyword(["2"]).addAnswer(
 
 const flowArticuloCientificoEtapa2 = addKeyword(["continuar", "2"]).addAnswer(
   [
-    "😁 Etapa 2: Presentación del artículo científico",
+    " *Etapa 2: Presentación del artículo científico* ",
     "➡️  Una vez que el artículo este publicado, debes contar con el informe de conformidad de la Dirección de Investigación y debes haber realizado el pago por el concepto de “Sustentación de tesis” y “Diploma de título”",
     "\n📋 *Requisitos*",
     "1️⃣ Informe de conformidad de tesis en formato artículo científico emitido por el asesor.",
@@ -774,9 +781,9 @@ const flowArticuloCientificoEtapa2 = addKeyword(["continuar", "2"]).addAnswer(
 const flowSustentacionTesis = addKeyword(["1", "si"]).addAnswer(
   [
     "🚀 Selecciona la opción que deseas conocer:",
-    "\n1️⃣ Inicio del proceso",
-    "2️⃣ Etapas del proceso de sustentación",
-    "3️⃣ Trámites adicionales",
+    "\n1️⃣ Inicio del proceso de titulación",
+    "2️⃣ Etapas del proceso de titulación",
+    "3️⃣ Trámites adicionales de titulación",
     "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *3*",
   ],
   null,
@@ -794,11 +801,13 @@ const flowArticuloCientificoPagNo = addKeyword(["2", "no"]).addAnswer(
 
 const flowArticuloCientificoPagSi = addKeyword(["1", "si"]).addAnswer(
   [
-    "😁 Etapa 1: Designación de asesor",
-    "➡️  Para iniciar debes cumplir con el requisito preliminar para iniciar el proceso y haber realizado el pago por concepto de  la modalidad.",
+    " *Etapa 1: Designación de asesor* ",
+    "➡️  Para continuar debes cumplir con los requisitos preliminares y haber realizado el pago por el concepto de la modalidad.",
     "\n📋 *Requisitos*",
     "1️⃣ Solicitud para la designación de asesor suscrito por el estudiante y tener la firma del asesor propuesto.",
-    "2️⃣ Presentar el plan de tesis en formato de artículo científico, en el cual debe figurar los nombres de todos los autores que participan en la publicación con la filiación respectiva. ",
+    "2️⃣ Presentar el plan de tesis en formato de artículo científico, en el cual debes figurar los nombres de todos los autores que participan en la publicación con la filiación respectiva. ",
+    "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://estudiantes.continental.edu.pe/ingresa* ",
+    "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/PublicacionUC* ",
     "\n✍️ Escribe *continuar* para la siguiente fase",
   ],
   null,
@@ -817,7 +826,7 @@ const flowArticuloCientificoReqNo = addKeyword(["2", "no"]).addAnswer(
 const flowArticuloCientificoReqSi = addKeyword(["1", "si"]).addAnswer(
   [
     "🚀 Ahora solicita a 🔗 *oficinatitulacion@continental.edu.pe* generar el pago de la modalidad de titulación",
-    "📧 Consignar en el cuerpo del correo el nombre completo de los estudiantes interesados y el DNI",
+    "📧 Consignar dentro del correo los datos completos y el DNI de cada participante.",
     "\n👀 *¿Ya realizaste el pago?*",
     "1️⃣ Si",
     "2️⃣ No",
@@ -841,7 +850,7 @@ const flowSuficienciaProfesionalEtapa3 = addKeyword([
   "3",
 ]).addAnswer(
   [
-    "😁 Etapa 3: Sustentación de trabajo de suficiencia profesional",
+    "*Etapa 3: Sustentación de trabajo de suficiencia profesional* ",
     "➡️  Se recomienda tener la conformidad de los tres jurados revisores, sin embargo si tu cuentas con la conformidad de dos ya puedes iniciar con el trámite de sustentación.",
     "\n📋 *Requisitos*",
     "1️⃣ Informe de conformidad de trabajo de suficiencia profesional emitido por el asesor.",
@@ -863,7 +872,7 @@ const flowSuficienciaProfesionalEtapa2 = addKeyword([
   "2",
 ]).addAnswer(
   [
-    "😁 *Etapa 2: Designación de jurados revisores* ",
+    " *Etapa 2: Designación de jurados revisores* ",
     "➡️  Una vez se haya emitido la resolución de designación de asesor de trabajo de suficiencia profesional, cuentas con 3 meses para elaborar el borrador de trabajo de suficiencia profesional.",
     "\n📋 *Requisitos*",
     "1️⃣ Cumplir con el requisito preliminar para iniciar el proceso y haber realizado el pago por el concepto de modalidad",
@@ -878,14 +887,14 @@ const flowSuficienciaProfesionalEtapa2 = addKeyword([
 
 const flowSuficienciaProfesionalPagoSi = addKeyword(["1", "si"]).addAnswer(
   [
-    "😁  *Etapa 1: Designación de asesor de trabajo de suficiencia profesional* ",
-    "➡️  Para iniciar debe cumplir con los siguientes requisitos.",
+    "  *Etapa 1: Designación de asesor de trabajo de suficiencia profesional* ",
+    "➡️  Para iniciar debes cumplir con los siguientes requisitos.",
     "\n📋 *Requisitos*",
     "1️⃣ Declaración jurada de experiencia laboral suscrito por el estudiante.",
     "2️⃣ Documentos que acrediten la experiencia laboral (boletas de pago, recibo de honorarios, certificados u otro equivalente), en un único archivo en PDF.",
     "3️⃣ Propuesta de trabajo de suficiencia profesional en formato digital.",
     "4️⃣ Pago por trámites administrativos de la modalidad, El trámite se realiza a través del portal del estudiante en el siguiente enlace 🔗 *https://estudiantes.continental.edu.pe/ingresar* ",
-    "\n👀 Recuerde, en el proceso de designación de asesor, el estudiante propone a su asesor, y para ello debe coordinar previamente la aceptación del asesoramiento con el docente, quien debe aceptar la propuesta firmando en la solicitud. ",
+    "\n👀 Recuerde, en el proceso de designación de asesor, el estudiante propone a su asesor, y para ello debes coordinar previamente la aceptación del asesoramiento con el docente, quien debe aceptar la propuesta firmando en la solicitud. ",
     "\n✍️ Escribe *continuar* para seguir con la siguiente etapa",
   ],
   null,
@@ -896,7 +905,7 @@ const flowSuficienciaProfesionalPagoSi = addKeyword(["1", "si"]).addAnswer(
 const flowSuficienciaProfesionalSi = addKeyword(["1", "si"]).addAnswer(
   [
     "🚀 Ahora solicita a 🔗 *oficinatitulacion@continental.edu.pe* generar el pago de la modalidad de titulación",
-    "📧 Consignar en el cuerpo del correo el nombre completo de los estudiantes interesados y el DNI",
+    "📧 Consignar dentro del correo los datos completos y el DNI de cada participante.",
     "\n👀 *¿Ya realizaste el pago?*",
     "1️⃣ Si",
     "2️⃣ No",
@@ -916,11 +925,13 @@ const flowSuficienciaProfesionalNo = addKeyword(["2", "no"]).addAnswer(
   [flowSuficienciaProfesionalPagoSi, flowSuficienciaProfesionalPagoNo]
 );
 
-const flowSuficienciaProfesionalProcess = addKeyword(["1", "si"]).addAnswer(
+const flowSuficienciaProfesionalProcess2 = addKeyword(["continuar"]).addAnswer(
   [
     "🚀 Para empezar con el trámite debes cumplir los siguientes requisitos.",
     "\n👉🏻 Bachiller con (01) un año como mínimo de experiencia laboral, desde la fecha de egreso, debidamente acreditado con boletas de pago, recibo de honorarios, certificados u otro equivalente.",
     "👉🏻 Recuerda que no aplican emprendimientos 🧐",
+    "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://estudiantes.continental.edu.pe/ingresa* ",
+    "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/TitulacionTSP-UC* ",
     "\n👀  *¿Cumples con todos los requisitos?*",
     "1️⃣ Si",
     "2️⃣ No",
@@ -949,7 +960,7 @@ const flowCambioAsesorSP = addKeyword(["2"]).addAnswer(
     "\n📋 *Requisitos*",
     "👉🏻 Informe detallando los motivos de la culminación del asesoramiento emitido por el antiguo asesor.",
     "👉🏻 Realizar el pago por el concepto de trámite de titulación",
-    "👀 Recuerde: Si usted a propuesto a un asesor la universidad le proporcionará una lista de asesores🖊️. Si no propone asesor la facultad designará un asesor de acuerdo con el área y línea de investigación. 🤓",
+    "👀 Recuerde: Si tú has propuesto a un asesor la universidad le proporcionará una lista de asesores🖊️. Si no propone asesor la facultad designará un asesor de acuerdo con el área y línea de investigación. 🤓",
   ],
   null,
   null
@@ -1025,12 +1036,31 @@ const flowSuficienciaProfesionalEtapas = addKeyword(["2"]).addAnswer(
   ]
 );
 
+const flowSuficienciaProfesionalProcess = addKeyword(["1", "si"])
+  .addAnswer("🖊️ Revisa los pasos para iniciar", {
+    media:
+      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/inforgrafiasuficienciaprofesional.png?raw=true", //'c:\ruta\imagen.png'
+  })
+  .addAnswer(
+    "🎯🚀 Estupendo ahora te comparto las tasas económicas correspondientes a titulación por trabajo de suficiencia profesional.",
+    {
+      media:
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20suficiencia%20pro.png?raw=true", //'c:\ruta\imagen.png'
+    }
+  )
+  .addAnswer(
+    "🤓 Para continuar con las etapas del proceso escribe *continuar*",
+    null,
+    null,
+    [flowSuficienciaProfesionalProcess2]
+  );
+
 const flowSuficienciaProfesional = addKeyword(["2"]).addAnswer(
   [
     "🚀 Selecciona la opción que deseas conocer.",
-    "\n1️⃣ Inicio del proceso",
-    "2️⃣ Etapas del proceso",
-    "3️⃣ Trámites adicionales",
+    "\n1️⃣ Inicio del proceso de titulación",
+    "2️⃣ Etapas del proceso de titulación",
+    "3️⃣ Trámites adicionales de titulación",
     "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *3*",
   ],
   null,
@@ -1042,9 +1072,9 @@ const flowSuficienciaProfesional = addKeyword(["2"]).addAnswer(
   ]
 );
 
-const flowArticuloCientificoProcess = addKeyword(["1", "si"]).addAnswer(
+const flowArticuloCientificoProcess2 = addKeyword(["continuar"]).addAnswer(
   [
-    "🚀 Para empezar con el trámite debes cumplir estos requisitos.",
+    "🚀 Para iniciar con el trámite debes cumplir con los siguientes requisitos preliminares:",
     "\n👉🏻 Tener el grado de bachiller registrado en SUNEDU",
     "👉🏻 Ser un bachiller que desea publicar un artículo científico en una revista indizada en la base de datos de literatura científica Scielo, Scopus o Web of Science.",
     "👉🏻 Debes cumplir con los lineamientos de la directiva 003-2023-R/UC",
@@ -1058,13 +1088,32 @@ const flowArticuloCientificoProcess = addKeyword(["1", "si"]).addAnswer(
   [flowArticuloCientificoReqSi, flowArticuloCientificoReqNo]
 );
 
+const flowArticuloCientificoProcess = addKeyword(["1", "si"])
+  .addAnswer("🖊️ Revisa los pasos para iniciar", {
+    media:
+      "https://github.com/Runniersoaoi/aws-example/blob/titulacion/img/Infografias%20Bot%20Wsp%20UC.png?raw=true", //'c:\ruta\imagen.png'
+  })
+  .addAnswer(
+    "🎯🚀 Estupendo ahora te comparto las tasas económicas correspondientes a titulación por sustentación de tesis en formato de artículo científico.",
+    {
+      media:
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20sustentacion.png?raw=true", //'c:\ruta\imagen.png'
+    }
+  )
+  .addAnswer(
+    "🤓 Para continuar con las etapas del proceso escribe *continuar*",
+    null,
+    null,
+    [flowArticuloCientificoProcess2]
+  );
+
 const flowCambioAsesor = addKeyword(["2"]).addAnswer(
   [
     "😁 El trámite se realiza una vez iniciado el proceso de titulación hasta antes de solicitar la presentación (Etapa 2)",
     "\n📋 *Requisitos*",
     "👉🏻 Informe detallando los motivos de la culminación del asesoramiento emitido por el antiguo asesor.",
     "👉🏻 Realizar el pago por el concepto de trámite de titulación",
-    "👀 Recuerde: Si usted a propuesto a un asesor la universidad le proporcionará una lista de asesores🖊️. Si no propone asesor la facultad designará un asesor de acuerdo con el área y línea de investigación. 🤓",
+    "👀 Recuerde: Si tú has propuesto a un asesor la universidad le proporcionará una lista de asesores🖊️. Si no propone asesor la facultad designará un asesor de acuerdo con el área y línea de investigación. 🤓",
   ],
   null,
   null
@@ -1119,9 +1168,9 @@ const flowArticuloCientificoEtapas = addKeyword(["2"]).addAnswer(
 const flowArticuloCientifico = addKeyword(["3"]).addAnswer(
   [
     "🚀 Selecciona la opción que deseas conocer.",
-    "\n1️⃣ Inicio del proceso",
-    "2️⃣ Etapas del proceso",
-    "3️⃣ Trámites adicionales",
+    "\n1️⃣ Inicio del proceso de titulación",
+    "2️⃣ Etapas del proceso de titulación",
+    "3️⃣ Trámites adicionales de titulación",
     "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *3*",
   ],
   null,
@@ -1148,7 +1197,7 @@ const flowTituloBachillerUC = addKeyword(["1", "si"]).addAnswer(
 
 const flowSustentacionTesisBE6 = addKeyword(["continuar"]).addAnswer(
   [
-    "🤓 Finalmente, una vez realizado el pago, se consolida tu matrícula en el taller y deberás esperar la confirmación que se enviara a tu correo electrónico para el inicio del taller. ",
+    "🤓 Finalmente, una vez realizado el pago, se consolida tu matrícula en la modalidad de sustentación de tesis y deberás esperar la confirmación que se enviara a tu correo electrónico para el inicio del taller. ",
     "\n 👀 La universidad le generará sus credenciales (usuario y contraseña) para su correo electrónico a través del cual se realizará toda comunicación oficial.",
     "\n✍️ Escribe *continuar* para seguir con el proceso ",
   ],
@@ -1176,7 +1225,7 @@ const flowSustentacionTesisBE4 = addKeyword(["continuar"])
     "🎯🚀 Estupendo ahora te compartiremos las tasas económicas para estudiantes provenientes de universidades con licencia denegada.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20sustentacion.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas-economicas-bachiller-universidad-nolicenciada-sustentacion.png?raw=true", //'c:\ruta\imagen.png'
     }
   )
   .addAnswer(
@@ -1191,7 +1240,7 @@ const flowSustentacionTesisBE4 = addKeyword(["continuar"])
 const flowSustentacionTesisBE3 = addKeyword(["continuar"]).addAnswer(
   [
     "🤓 Posterior al envío de su solicitud y a la documentación requerida, enviaremos un correo comunicando que se generó la tasa de admisión (S/ 100).",
-    "\n 🏦 Recuerde que este pago debe ser realizado en un maximo de 24 horas por todos los participantes, para que su expediente continúe con la segunda etapa de “Evaluación documentaria”.",
+    "\n 🏦 Recuerda que este pago debe ser realizado en un maximo de 24 horas por todos los participantes, para que su expediente continúe con la segunda etapa de “Evaluación documentaria y académica”.",
     "\n 👀 Debes tener en cuenta que la presentación incompleta de los requisitos es motivo de *rechazo de la admisión* . Así mismo, independientemente del resultado de admisión, *la tasa de admisión no está sujeta a devolución* .",
     "\n⏱️ Toma el tiempo necesario para realizar el pago, escribe *continuar* si ya lo hiciste.",
   ],
@@ -1202,9 +1251,9 @@ const flowSustentacionTesisBE3 = addKeyword(["continuar"]).addAnswer(
 
 const flowSustentacionTesisBE2 = addKeyword(["continuar"]).addAnswer(
   [
-    "🚀 Si ya tienes todos los formatos listos, tienes que enviarlos al correo 📧 *oficinatitulacion@continental.edu.pe*",
+    "🚀 Si cuentas con todos los requisitos completos, tienes que enviarlos al correo 📧 *oficinatitulacion@continental.edu.pe*",
     "\n ➡️ El asunto del correo debe ser el siguiente: [BACHILLER EXTERNO - Admisión] – Nombre/s de estudiante/s",
-    "\n 👀 Debes asegurarte de presentar los formatos *completos* , de lo contrario tu solicitud será rechazada.",
+    "\n 👀 Debes asegurarte de presentar los requisitos *completos* , de lo contrario tu solicitud será rechazada.",
     "\n⏱️ Esperare unos minutos para que envíes los formatos al correo indicado, escribe *continuar* si ya lo hiciste.",
   ],
   null,
@@ -1232,6 +1281,10 @@ const flowSustentacionTesisBE1 = addKeyword(["continuar"])
     media:
       "C:/Users/Admin/Desktop/birretito/aws-example/documents/DESCARGAR - Solicitud de admisión - 3 paticipantes - BE.docx", //'c:\ruta\imagen.png'
   })
+  .addAnswer("🎓 Formato de bachiller:", {
+    media:
+      "C:/Users/Admin/Desktop/birretito/aws-example/documents/Directiva Taller de elaboración de TSP - BE.pdf", //'c:\ruta\imagen.png'
+  })
   .addAnswer(
     [
       "⏱️ Toma el tiempo que consideres pertinente para completar todos los formatos enviados, escribe *continuar* si ya lo hiciste.",
@@ -1243,13 +1296,13 @@ const flowSustentacionTesisBE1 = addKeyword(["continuar"])
 
 const flowSustentacionTesisBE = addKeyword(["continuar"]).addAnswer(
   [
-    "🚀 Para iniciar por la modalidad de sustentación de tesis debes cumplir con los siguientes requisitos",
+    "🚀 Para iniciar por la modalidad de sustentación de tesis debes cumplir con los siguientes requisitos:",
     "\n1️⃣ Solicitud o ficha de admisión",
     "2️⃣ Constancia de primera matrícula de la universidad de procedencia. Debe figurar la fecha de matrícula en formato día, mes y año *(dd/mm/aaaa)*.",
     "3️⃣ Constancia de egresado de la universidad de procedencia. Debe figurar la fecha de egreso en formato día, mes y año *(dd/mm/aaaa)*.",
     "4️⃣ DNI escaneado por ambas caras.",
     "5️⃣ Propuesta de Plan de tesis (Proyecto de tesis) completo.",
-    "\n📄 A continuación te enviaremos los formatos correspondientes a los requisitos ya mencionados, escribe *continuar* ",
+    "\n📄 A continuación te enviaremos los formatos correspondientes a la ficha de admisión y carta de compromiso, escribe *continuar* ",
   ],
   null,
   null,
@@ -1283,7 +1336,7 @@ const flowSustentacionTesisBE0 = addKeyword(["1", "si"])
 
 const flowSuficienciaProfesionalBE7 = addKeyword(["continuar"]).addAnswer(
   [
-    "🤓 Finalmente, una vez realizado el pago, se consolida tu matrícula en el taller y deberás esperar la confirmación que se enviará a tu correo electrónico para el inicio del taller. ",
+    "🤓 Finalmente, una vez realizado el pago, se consolida tu matrícula por la modalidad de trabajo de suficiencia profesional y deberás esperar la confirmación que se enviará a tu correo electrónico para el inicio del taller. ",
     "\n 👀 La universidad le generará sus credenciales (usuario y contraseña) para ingresar a su correo electrónico a través del cual se realizará toda comunicación oficial.",
     "\n✍️ Escribe *continuar* para seguir con el proceso ",
   ],
@@ -1298,7 +1351,7 @@ const flowSuficienciaProfesionalBE6 = addKeyword(["continuar"]).addAnswer(
     "\n Obtendrás la condición de APTO (Solicitud aceptada) posterior a la aprobación de la evaluación documentaria y académica, por lo que se te enviará un correo 📧 de la Oficina de Titulación informando que debes realizar el pago de las tasas económicas en un plazo maximo de 72 horas. 🧐  ",
     "\n 👀 Para iniciar es indispensable que pagues el monto correspondientes a la tasa del *Elaboración de trabajo de suficiencia profesional* ",
     "\n 🤓 El pago de las tasas correspondientes a *Sustentación de trabajo de suficiencia profesionals* y *Diploma de título* se realiza en la etapa final de su proceso, al solicitar fecha y hora de sustentación.",
-    "\n ⏱️ oma el tiempo necesario para realizar el pago, escribe *continuar* si ya lo hiciste y si ya revisaste la información que te compartimos.",
+    "\n ⏱️ Toma el tiempo necesario para realizar el pago, escribe *continuar* si ya lo hiciste y si ya revisaste la información que te compartimos.",
   ],
   null,
   null,
@@ -1310,7 +1363,7 @@ const flowSuficienciaProfesionalBE5 = addKeyword(["continuar"])
     "🎯🚀 Estupendo ahora te compartiremos las tasas económicas para estudiantes provenientes de universidades con licencia denegada.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20suficiencia%20pro.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas-economicas-bachiller-universidad-nolicenciada-suficiencia.png?raw=true", //'c:\ruta\imagen.png'
     }
   )
   .addAnswer(
@@ -1325,7 +1378,7 @@ const flowSuficienciaProfesionalBE5 = addKeyword(["continuar"])
 const flowSuficienciaProfesionalBE4 = addKeyword(["continuar"]).addAnswer(
   [
     "🤓 Posterior al envío de su solicitud y a la documentación requerida, enviaremos un correo comunicando que se generó la tasa de admisión (S/ 100).",
-    "\n 🏦 Recuerde que este pago debe ser realizado en un maximo de 24 horas por todos los participantes, para que su expediente continúe con la segunda etapa de “Evaluación documentaria”.",
+    "\n 🏦 Recuerde que este pago debe ser realizado en un maximo de 24 horas por todos los participantes, para que su expediente continúe con la segunda etapa de “Evaluación documentaria y académica”.",
     "\n 👀 Debes tener en cuenta que la presentación incompleta de los requisitos es motivo de *rechazo de la admisión* . Así mismo, independientemente del resultado de admisión, *la tasa de admisión no está sujeta a devolución* .",
     "\n⏱️ Toma el tiempo necesario para realizar el pago, escribe *continuar* si ya lo hiciste.",
   ],
@@ -1336,9 +1389,9 @@ const flowSuficienciaProfesionalBE4 = addKeyword(["continuar"]).addAnswer(
 
 const flowSuficienciaProfesionalBE3 = addKeyword(["continuar"]).addAnswer(
   [
-    "🚀 Si ya tienes todos los formatos listos, tienes que enviarlos al correo 📧 *oficinatitulacion@continental.edu.pe*",
+    "🚀 Si cuentas con todos los requisitos completos, tienes que enviarlos al correo 📧 *oficinatitulacion@continental.edu.pe*",
     "\n ➡️ El asunto del correo debe ser el siguiente: [BACHILLER EXTERNO - Admisión] – Nombre/s de estudiante/s",
-    "\n 👀 Debes asegurarte de presentar los formatos completos , de lo contrario tu solicitud será rechazada.",
+    "\n 👀 Debes asegurarte de presentar los requisitos completos , de lo contrario tu solicitud será rechazada.",
     "\n⏱️ Esperare unos minutos para que envíes los formatos al correo indicado, escribe *continuar* si ya lo hiciste.",
   ],
   null,
@@ -1377,14 +1430,14 @@ const flowSuficienciaProfesionalBE2 = addKeyword(["continuar"])
 
 const flowSuficienciaProfesionalBE1 = addKeyword(["continuar"]).addAnswer(
   [
-    "🚀 Para iniciar por la modalidad de suficiencia profesional debes cumplir con los siguientes requisitos:",
+    "🚀 Para iniciar por la modalidad de trabajo de suficiencia profesional debes cumplir con los siguientes requisitos:",
     "\n1️⃣ Solicitud o ficha de admisión",
     "2️⃣ Constancia de primera matrícula de la universidad de procedencia. Debe figurar la fecha de matrícula en formato día, mes y año *(dd/mm/aaaa)*.",
     "3️⃣ Constancia de egresado de la universidad de procedencia. Debe figurar la fecha de egreso en formato día, mes y año *(dd/mm/aaaa)*.",
     "4️⃣ DNI escaneado por ambas caras.",
-    "5️⃣ Propuesta de Plan de tesis (Proyecto de tesis) completo.",
+    "5️⃣ Propuesta de plan de trabajo de suficiencia profesional completo.",
     "6️⃣ Declaración jurada de experiencia profesional adjuntado boletas de pago, certificado de trabajo y/o contratos que acrediten *TODO* el tiempo laborado según la declaración jurada de experiencia profesional (por favor adjuntar en un sólo PDF y en el orden de la declaración jurada)",
-    "\n📄 A continuación te enviaremos los formatos correspondientes a los requisitos ya mencionados, escribe *continuar* ",
+    "\n📄 A continuación te enviaremos los formatos correspondientes a carta de compromiso y solicitud de adminisión, escribe *continuar* ",
   ],
   null,
   null,
@@ -1394,7 +1447,7 @@ const flowSuficienciaProfesionalBE1 = addKeyword(["continuar"]).addAnswer(
 const flowSuficienciaProfesionalBE = addKeyword(["2"])
   .addAnswer(
     [
-      "🚀 Esta modalidad de titulación implica que tu como bachiller estás en la capacidad de demostrar y documentar el dominio y la aplicación de competencias profesionales adquiridas a lo largo de tu carrera. ",
+      "🚀 Esta modalidad de titulación implica que tú como bachiller estás en la capacidad de demostrar y documentar el dominio y la aplicación de competencias profesionales adquiridas a lo largo de tu carrera. ",
       "\n 👀 Además, tienes que haber laborado 1 año ininterrumpido o acumulativo desde tu fecha de egreso.",
     ],
     null,
@@ -1469,6 +1522,7 @@ const flowMenuGeneral = addKeyword(["menu", "Menu", "menú", "Menú"]).addAnswer
     "😊✨ Este es mi menú principal escribe el número con la opción que deseas consultar:",
     "\n1️⃣ Bachiller",
     "2️⃣ Título Profesional",
+    "👀 Recuerda: Si en algún momento ingresas información incorrecta, puedes escribir la palabra *menu* y volveras a este menú principal",
     "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*",
   ],
   null,
