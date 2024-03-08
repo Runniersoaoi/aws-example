@@ -432,7 +432,7 @@ const flowSustentacionTesis24Ingenieria = addKeyword([
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesisBE7]
@@ -459,7 +459,7 @@ const flowSustentacionTesis24CienciasEmpresariales = addKeyword([
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesisBE7]
@@ -486,7 +486,7 @@ const flowSustentacionTesis24CienciasSalud = addKeyword([
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesisBE7]
@@ -513,7 +513,7 @@ const flowSustentacionTesis24DerechoHumanidades = addKeyword([
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesisBE7]
@@ -549,7 +549,7 @@ const flowSustentacionTesis23 = addKeyword(["3", "continuar", "Continuar"])
     [
       "*Etapa 3: Designación de jurados revisores*",
       "\n💬 Desde la inscripción de plan de tesis cuentas con un plazo máximo de 12 meses para solicitar la designación de jurados revisores.",
-      "🚀 Para iniciar con el proceso tú debes presentar:",
+      "🚀 Para iniciar con el proceso debes presentar:",
       "\n1️⃣ El informe de conformidad de borrador de tesis emitido por el asesor.",
       "2️⃣ El borrador de tesis aprobado por el asesor en formato digital",
     ],
@@ -557,7 +557,7 @@ const flowSustentacionTesis23 = addKeyword(["3", "continuar", "Continuar"])
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesis24]
@@ -591,7 +591,7 @@ const flowSustentacionTesis22Ingenieria = addKeyword([
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesis23]
@@ -612,7 +612,7 @@ const flowSustentacionTesis22CienciasEmpresariales = addKeyword([
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesis23]
@@ -634,7 +634,7 @@ const flowSustentacionTesis22CienciasSalud = addKeyword([
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesis23]
@@ -656,7 +656,7 @@ const flowSustentacionTesis22DerechoHumanidades = addKeyword([
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesis23]
@@ -691,18 +691,18 @@ const flowSustentacionTesis21 = addKeyword(["1", "continuar", "Continuar"])
   .addAnswer(
     [
       "*Etapa 1: Designación de asesor*",
-      "\n🚀 Para iniciar con el proceso tú:",
+      "\n🚀 Para iniciar con el proceso:",
       "\n1️⃣ Debes ser estudiante de último semestre, egresado o bachiller.",
       "2️⃣ Debes tener una propuesta de plan de tesis",
       "3️⃣ Debes haber realizado el pago por trámites administrativos de la modalidad",
-      "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://estudiantes.continental.edu.pe/ingresa* ",
+      "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://gradosytitulos.continental.edu.pe* ",
       "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/TitulacionTesis-UC* ",
     ],
     null,
     null
   )
   .addAnswer(
-    "🤓 Para continuar con la siguiente etapa escribe *continuar*",
+    "🤓 Para seguir con la siguiente etapa escribe *continuar*",
     null,
     null,
     [flowSustentacionTesis22]
@@ -744,7 +744,7 @@ const flowSustentacionTesis1 = addKeyword(["1", "si"])
     }
   )
   .addAnswer(
-    "🤓 Para continuar con las etapas del proceso escribe *continuar*",
+    "🤓 Para seguir con las etapas del proceso escribe *continuar*",
     null,
     null,
     [flowSustentacionTesis21]
@@ -806,7 +806,7 @@ const flowArticuloCientificoPagSi = addKeyword(["1", "si"]).addAnswer(
     "\n📋 *Requisitos*",
     "1️⃣ Solicitud para la designación de asesor suscrito por el estudiante y tener la firma del asesor propuesto.",
     "2️⃣ Presentar el plan de tesis en formato de artículo científico, en el cual debes figurar los nombres de todos los autores que participan en la publicación con la filiación respectiva. ",
-    "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://estudiantes.continental.edu.pe/ingresa* ",
+    "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://gradosytitulos.continental.edu.pe* ",
     "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/PublicacionUC* ",
     "\n✍️ Escribe *continuar* para la siguiente fase",
   ],
@@ -930,7 +930,7 @@ const flowSuficienciaProfesionalProcess2 = addKeyword(["continuar"]).addAnswer(
     "🚀 Para empezar con el trámite debes cumplir los siguientes requisitos.",
     "\n👉🏻 Bachiller con (01) un año como mínimo de experiencia laboral, desde la fecha de egreso, debidamente acreditado con boletas de pago, recibo de honorarios, certificados u otro equivalente.",
     "👉🏻 Recuerda que no aplican emprendimientos 🧐",
-    "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://estudiantes.continental.edu.pe/ingresa* ",
+    "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://gradosytitulos.continental.edu.pe* ",
     "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/TitulacionTSP-UC* ",
     "\n👀  *¿Cumples con todos los requisitos?*",
     "1️⃣ Si",
@@ -1049,7 +1049,7 @@ const flowSuficienciaProfesionalProcess = addKeyword(["1", "si"])
     }
   )
   .addAnswer(
-    "🤓 Para continuar con las etapas del proceso escribe *continuar*",
+    "🤓 Para seguir con las etapas del proceso escribe *continuar*",
     null,
     null,
     [flowSuficienciaProfesionalProcess2]
@@ -1101,7 +1101,7 @@ const flowArticuloCientificoProcess = addKeyword(["1", "si"])
     }
   )
   .addAnswer(
-    "🤓 Para continuar con las etapas del proceso escribe *continuar*",
+    "🤓 Para seguir con las etapas del proceso escribe *continuar*",
     null,
     null,
     [flowArticuloCientificoProcess2]
@@ -1522,7 +1522,7 @@ const flowMenuGeneral = addKeyword(["menu", "Menu", "menú", "Menú"]).addAnswer
     "😊✨ Este es mi menú principal escribe el número con la opción que deseas consultar:",
     "\n1️⃣ Bachiller",
     "2️⃣ Título Profesional",
-    "👀 Recuerda: Si en algún momento ingresas información incorrecta, puedes escribir la palabra *menu* y volveras a este menú principal",
+    "\n👀 Recuerda: Si en algún momento ingresas información incorrecta, puedes escribir la palabra *menu* y volveras a este menú principal",
     "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*",
   ],
   null,
