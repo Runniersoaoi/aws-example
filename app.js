@@ -11,6 +11,7 @@ const { EVENTS } = require("@bot-whatsapp/bot");
 const REGEX_CREDIT_NUMBER = /^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$/u;
 const EXPRESION_DNI = /^[0-9]{7,8}[0-9K]$/;
 const EXPRESION_STARS = /^[1-5]$/;
+const directorio = __dirname.replace(/\\/g, "/");
 
 let nomUsuario = "";
 
@@ -32,10 +33,9 @@ const MONGO_DB_NAME = "db_bot";
 
 const flowSustentacionTesisBE7 = addKeyword(["continuar"])
   .addAnswer(
-    "📄 Descarga el formato de la solicitud y llénalo completamente según el instructivo. \n\nInstructivo para rellenar la solicitud:",
+    "📄 Descarga el formato de la solicitud y rellenalo completamente según el instructivo. \n\nInstructivo para rellenar la solicitud:",
     {
-      media:
-        "C:/Users/Admin/Desktop/birretito/aws-example/documents/Contacto y consultas.pdf", //'c:\ruta\imagen.png'
+      media: directorio + "/documents/Contacto y consultas.pdf",
     }
   )
   .addAnswer(
@@ -87,28 +87,28 @@ const flowFotografiaListo = addKeyword(["continuar"])
     "🔗 Ingresa al portal del estudiante *https://estudiantes.continental.edu.pe/ingresar* en el apartado de trámites",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso2.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso2.png?raw=true",
     }
   )
   .addAnswer(
     "✅ Selecciona la opción Seguimiento y selecciona la solicitud enviada",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/seguimiento-apartado.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/seguimiento-apartado.png?raw=true",
     }
   )
   .addAnswer(
     "💻 Al ingresar a la solicitud, ⭐ podras visualizar su estado en el transcurso de los días, cuando este se asemeje al de la imagen significará que ya ha sido recibida por la oficina de Grados y Títulos, y estará pendiente a ser procesada. 🔨",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/seguimiento-estaddo.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/seguimiento-estaddo.png?raw=true",
     }
   )
   .addAnswer(
     "👀 Recuerda una vez recibida tu solicitud será atendida según el siguiente cronograma",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes2.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes2.png?raw=true",
     }
   )
   .addAnswer(
@@ -121,7 +121,7 @@ const flowFotografiaListo = addKeyword(["continuar"])
 const flowFotografia = addKeyword(["3"])
   .addAnswer("📄 Especificaciones de la fotografía", {
     media:
-      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/indicaciones-fotografias.png?raw=true", //'c:\ruta\imagen.png'
+      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/indicaciones-fotografias.png?raw=true",
   })
   .addAnswer(
     [
@@ -148,7 +148,7 @@ const flowSolicitudCargada = addKeyword(["continuar", "ya", "pague"])
     "👀 Verifica si cumples con todas las indicaciones para tu fotografía",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/requisitos-fotografia.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/requisitos-fotografia.png?raw=true",
     }
   )
   .addAnswer(
@@ -172,19 +172,19 @@ const flowSolicitudLista = addKeyword(["continuar", "ya", "pague"])
     "🔗 Ingresa al portal del estudiante *https://estudiantes.continental.edu.pe/ingresar* en el apartado de trámites",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso2.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/activar-pago-paso2.png?raw=true",
     }
   )
   .addAnswer(
     "✅ Selecciona la opción Diploma de Bachiller y carga la solicitud.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cargar-solicitud-paso1.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cargar-solicitud-paso1.png?raw=true",
     }
   )
   .addAnswer(
     [
-      "🏫 Ademas si has realizado convalidación o traslado externo, tambien debes cargar la constancia de primera matricula de la institución de procedencia. (👀 Este documento debe contener la fecha exacta de inicio de sus estudios)",
+      "🏫 Además si has realizado convalidación o traslado externo, también debes cargar la constancia de primera matricula de la institución de procedencia. (👀 Este documento debe contener la fecha exacta de inicio de sus estudios)",
       "\n⏱️ Te espero unos minutos, escribe *continuar* si ya cargaste la solicitud",
     ],
     null,
@@ -201,16 +201,14 @@ const flowPagoListo = addKeyword(["continuar", "ya", "pague"])
     null
   )
   .addAnswer("Archivo 1", {
-    media:
-      "C:/Users/Admin/Desktop/bot-baileys/base-baileys-mongo/documents/Formato-de-bachiller-instructivo.pdf", //'c:\ruta\imagen.png'
+    media: directorio + "/documents/Formato-de-bachiller-instructivo.pdf",
   })
   .addAnswer("Archivo 2", {
-    media:
-      "C:/Users/Admin/Desktop/bot-baileys/base-baileys-mongo/documents/Formato-de-bachiller.docx",
+    media: directorio + "/documents/Formato-de-bachiller.docx",
   })
   .addAnswer(
     [
-      "📄🎓 Descarga el formato de la solicitud y llénalo completamente según el instructivo.",
+      "📄🎓 Descarga el formato de la solicitud y rellénalo completamente según el instructivo.",
       "\n⏱️ Te espero unos minutos, escribe *continuar* si ya rellenaste la solicitud",
     ],
     null,
@@ -221,7 +219,7 @@ const flowPagoListo = addKeyword(["continuar", "ya", "pague"])
 const flowPagoActivadoBachiller = addKeyword(["continuar", "ya", "pague"])
   .addAnswer("➡️ Entidades autorizadas 💻", {
     media:
-      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/metodos-pago.png?raw=true", //'c:\ruta\imagen.png'
+      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/metodos-pago.png?raw=true",
   })
   .addAnswer(
     [
@@ -238,7 +236,7 @@ const flowTramiteBachillerOp = addKeyword(["continuar"])
     "➡️ A continuación te detallo los pasos a seguir una vez que se te aperture la nueva ventana 💻",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/Infografia%20ultimos%20pasos%20solicitud.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/Infografia%20ultimos%20pasos%20solicitud.png?raw=true",
     }
   )
   .addAnswer(
@@ -255,7 +253,7 @@ const flowTramiteBachillerAv = addKeyword(["1", "si"])
     "🙌 Aqui te dejo una 📃 infografía con los primeros pasos a seguir para que puedas realizar tu trámite 😊",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/infografia-primeros-pasos.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/infografia-primeros-pasos.png?raw=true",
     }
   )
   .addAnswer(
@@ -278,7 +276,7 @@ const flowStopTramiteBachiller = addKeyword(["2", "no"]).addAnswer(
 const flowRequisitosCumplidosBachiller = addKeyword(["1", "si"])
   .addAnswer("🚀 Este es el cronograma de solicitudes", {
     media:
-      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes2.png?raw=true", //'c:\ruta\imagen.png'
+      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes2.png?raw=true",
   })
   .addAnswer(
     [
@@ -325,7 +323,7 @@ const flowBachiller = addKeyword(["2"]).addAnswer(
     "👉 Haber realizado *prácticas preprofesionales* .",
     "👉 Haber realizado *proyección social* y/o *actividades extracurriculares* .",
     "👉 *No tener deuda* con la Universidad.",
-    "👉 En caso de *traslados externos* y/o *convalidación* , tener la *constancia de la primera matrícula* de la institución de procedencia con la fecha exacta.",
+    "👉 En caso de *traslados externos* y/o *convalidación,* tener la *constancia de la primera matrícula* de la institución de procedencia con la fecha exacta.",
     "\n🤓 ¿Cumples con todos los requisitos mencionados?",
     "1️⃣ Si",
     "2️⃣ No",
@@ -418,7 +416,7 @@ const flowSustentacionTesis24Ingenieria = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para poder realizar la sustentación de tesis tú debes contar con:",
+      "💬 Para poder realizar la sustentación de tesis debes contar con:",
       "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
       "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
       "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
@@ -445,7 +443,7 @@ const flowSustentacionTesis24CienciasEmpresariales = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para poder realizar la sustentación de tesis tú debes contar con:",
+      "💬 Para poder realizar la sustentación de tesis debes contar con:",
       "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
       "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
       "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
@@ -472,7 +470,7 @@ const flowSustentacionTesis24CienciasSalud = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para poder realizar la sustentación de tesis tú debes contar con:",
+      "💬 Para poder realizar la sustentación de tesis debes contar con:",
       "\n1️⃣ El informe de conformidad de tesis emitida por el asesor ",
       "2️⃣ El informe de conformidad de tesis emitida por cada jurado revisor",
       "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
@@ -499,7 +497,7 @@ const flowSustentacionTesis24DerechoHumanidades = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para poder realizar la sustentación de tesis tú debes contar con:",
+      "💬 Para poder realizar la sustentación de tesis debes contar con:",
       "\n1️⃣ El archivo adjunto de el informe de conformidad de tesis y la rúbrica emitida por el asesor ",
       "2️⃣ El archivo adjunto de el informe de conformidad de tesis y la rúbrica emitida por cada jurado revisor ",
       "3️⃣ El informe de conformidad de originalidad de tesis emitido por el asesor",
@@ -526,8 +524,8 @@ const flowSustentacionTesis24 = addKeyword([
 ]).addAnswer(
   [
     "*Etapa 4: Sustentación de tesis*",
-    "\n💬 Se recomienda tener la conformidad de los tres jurados revisores, sin embargo si tú cuentas con la conformidad de dos ya puede iniciar con el trámite de sustentación.",
-    "🚀 Para continuar elecciona tu facultad:",
+    "\n💬 Se recomienda tener la conformidad de los tres jurados revisores, sin embargo si tú cuentas con la conformidad de dos ya puedes iniciar con el trámite de sustentación.",
+    "🚀 Para continuar selecciona tu facultad:",
     "\n1️⃣ Ingeniería",
     "2️⃣ Ciencias de la empresa",
     "3️⃣ Ciencias de la salud",
@@ -583,7 +581,7 @@ const flowSustentacionTesis22Ingenieria = addKeyword([
 ])
   .addAnswer(
     [
-      "💬 Para inscribir su plan de tesis tú debes contar con:",
+      "💬 Para inscribir su plan de tesis debes contar con:",
       "\n1️⃣ El informe de conformidad de plan de tesis emitido por el asesor",
       "2️⃣ El plan de tesis",
     ],
@@ -734,13 +732,13 @@ const flowSustentacionTesis2 = addKeyword([
 const flowSustentacionTesis1 = addKeyword(["1", "si"])
   .addAnswer("🖊️ Revisa los pasos para iniciar", {
     media:
-      "https://github.com/Runniersoaoi/aws-example/blob/titulacion/img/Infografias%20Bot%20Wsp%20UC.png?raw=true", //'c:\ruta\imagen.png'
+      "https://github.com/Runniersoaoi/aws-example/blob/titulacion/img/Infografias%20Bot%20Wsp%20UC.png?raw=true",
   })
   .addAnswer(
     "🎯🚀 Estupendo ahora te comparto las tasas económicas correspondientes a titulación por sustentación de tesis.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20sustentacion.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20sustentacion.png?raw=true",
     }
   )
   .addAnswer(
@@ -807,7 +805,7 @@ const flowArticuloCientificoPagSi = addKeyword(["1", "si"]).addAnswer(
     "1️⃣ Solicitud para la designación de asesor suscrito por el estudiante y tener la firma del asesor propuesto.",
     "2️⃣ Presentar el plan de tesis en formato de artículo científico, en el cual debes figurar los nombres de todos los autores que participan en la publicación con la filiación respectiva. ",
     "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://gradosytitulos.continental.edu.pe* ",
-    "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/PublicacionUC* ",
+    "Puedes consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/PublicacionUC* ",
     "\n✍️ Escribe *continuar* para la siguiente fase",
   ],
   null,
@@ -931,7 +929,7 @@ const flowSuficienciaProfesionalProcess2 = addKeyword(["continuar"]).addAnswer(
     "\n👉🏻 Bachiller con (01) un año como mínimo de experiencia laboral, desde la fecha de egreso, debidamente acreditado con boletas de pago, recibo de honorarios, certificados u otro equivalente.",
     "👉🏻 Recuerda que no aplican emprendimientos 🧐",
     "\nEl trámite se realiza a través del portal del estudiante en el siguiente enlace: 🔗 *https://gradosytitulos.continental.edu.pe* ",
-    "Puede consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/TitulacionTSP-UC* ",
+    "Puedes consultar el procedimiento, plantillas, anexos e información importante en el siguiente enlace. 🔗 *http://bit.ly/TitulacionTSP-UC* ",
     "\n👀  *¿Cumples con todos los requisitos?*",
     "1️⃣ Si",
     "2️⃣ No",
@@ -1039,13 +1037,13 @@ const flowSuficienciaProfesionalEtapas = addKeyword(["2"]).addAnswer(
 const flowSuficienciaProfesionalProcess = addKeyword(["1", "si"])
   .addAnswer("🖊️ Revisa los pasos para iniciar", {
     media:
-      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/inforgrafiasuficienciaprofesional.png?raw=true", //'c:\ruta\imagen.png'
+      "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/inforgrafiasuficienciaprofesional.png?raw=true",
   })
   .addAnswer(
     "🎯🚀 Estupendo ahora te comparto las tasas económicas correspondientes a titulación por trabajo de suficiencia profesional.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20suficiencia%20pro.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20suficiencia%20pro.png?raw=true",
     }
   )
   .addAnswer(
@@ -1091,13 +1089,13 @@ const flowArticuloCientificoProcess2 = addKeyword(["continuar"]).addAnswer(
 const flowArticuloCientificoProcess = addKeyword(["1", "si"])
   .addAnswer("🖊️ Revisa los pasos para iniciar", {
     media:
-      "https://github.com/Runniersoaoi/aws-example/blob/titulacion/img/Infografias%20Bot%20Wsp%20UC.png?raw=true", //'c:\ruta\imagen.png'
+      "https://github.com/Runniersoaoi/aws-example/blob/titulacion/img/Infografias%20Bot%20Wsp%20UC.png?raw=true",
   })
   .addAnswer(
     "🎯🚀 Estupendo ahora te comparto las tasas económicas correspondientes a titulación por sustentación de tesis en formato de artículo científico.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20sustentacion.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas%20economicas%20sustentacion.png?raw=true",
     }
   )
   .addAnswer(
@@ -1211,7 +1209,7 @@ const flowSustentacionTesisBE5 = addKeyword(["continuar"]).addAnswer(
     "🤓 Excelente! Sigamos avanzando",
     "\n Obtendrás la condición de *APTO* (Solicitud aceptada) posterior a la aprobación de la evaluación documentaria y académica, por lo que se te enviará un correo 📧 de la Oficina de Titulación informando que debes realizar el pago de las tasas económicas en un plazo maximo de 72 horas. 🧐    ",
     "\n 👀 Para iniciar es indispensable que pague los montos correspondientes a la tasa de *Elaboración de tesis* y la primera cuota de *Taller de elaboración de tesis* ",
-    "\n 🏦 El pago de las otras 3 cuotas del *Taller de elaboración de tesis* las puede realizar de forma mensual una vez iniciado el taller.",
+    "\n 🏦 El pago de las otras 3 cuotas del *Taller de elaboración de tesis* las puedes realizar de forma mensual una vez iniciado el taller.",
     "\n 🤓 El pago de las tasas correspondientes a *Sustentación de tesis* y *Diploma de título* se realiza en la etapa final de su proceso, al solicitar fecha y hora de sustentación.",
     "\n ⏱️ Toma el tiempo necesario para realizar el pago, escribe *continuar* si ya lo hiciste y si ya revisaste la información que te compartimos.",
   ],
@@ -1225,7 +1223,7 @@ const flowSustentacionTesisBE4 = addKeyword(["continuar"])
     "🎯🚀 Estupendo ahora te compartiremos las tasas económicas para estudiantes provenientes de universidades con licencia denegada.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas-economicas-bachiller-universidad-nolicenciada-sustentacion.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas-economicas-bachiller-universidad-nolicenciada-sustentacion.png?raw=true",
     }
   )
   .addAnswer(
@@ -1253,7 +1251,7 @@ const flowSustentacionTesisBE2 = addKeyword(["continuar"]).addAnswer(
   [
     "🚀 Si cuentas con todos los requisitos completos, tienes que enviarlos al correo 📧 *oficinatitulacion@continental.edu.pe*",
     "\n ➡️ El asunto del correo debe ser el siguiente: [BACHILLER EXTERNO - Admisión] – Nombre/s de estudiante/s",
-    "\n 👀 Debes asegurarte de presentar los requisitos *completos* , de lo contrario tu solicitud será rechazada.",
+    "\n 👀 Debes asegurarte de presentar los requisitos *completos,*  de lo contrario tu solicitud será rechazada.",
     "\n⏱️ Esperare unos minutos para que envíes los formatos al correo indicado, escribe *continuar* si ya lo hiciste.",
   ],
   null,
@@ -1263,27 +1261,30 @@ const flowSustentacionTesisBE2 = addKeyword(["continuar"]).addAnswer(
 
 const flowSustentacionTesisBE1 = addKeyword(["continuar"])
   .addAnswer(
-    "📄 Descarga el formato de la solicitud y llénalo completamente según el instructivo. \n\nInstructivo para rellenar la solicitud:",
+    "📄 Descarga el formato de la solicitud y rellénalo completamente según el instructivo. \n\nInstructivo para rellenar la solicitud:",
     {
       media:
-        "C:/Users/Admin/Desktop/birretito/aws-example/documents/DESCARGAR - Carta de compromiso - BE.docx", //'c:\ruta\imagen.png'
+        directorio + "/documents/DESCARGAR - Carta de compromiso - BE.docx",
     }
   )
   .addAnswer("🎓 Formato de bachiller:", {
     media:
-      "C:/Users/Admin/Desktop/birretito/aws-example/documents/DESCARGAR - Solicitud de admisión - 1 paticipante - BE.docx", //'c:\ruta\imagen.png'
+      directorio +
+      "/documents/DESCARGAR - Solicitud de admisión - 1 paticipante - BE.docx",
   })
   .addAnswer("🎓 Formato de bachiller:", {
     media:
-      "C:/Users/Admin/Desktop/birretito/aws-example/documents/DESCARGAR - Solicitud de admisión - 2 paticipantes - BE.docx", //'c:\ruta\imagen.png'
+      directorio +
+      "/documents/DESCARGAR - Solicitud de admisión - 2 paticipantes - BE.docx",
   })
   .addAnswer("🎓 Formato de bachiller:", {
     media:
-      "C:/Users/Admin/Desktop/birretito/aws-example/documents/DESCARGAR - Solicitud de admisión - 3 paticipantes - BE.docx", //'c:\ruta\imagen.png'
+      directorio +
+      "/documents/DESCARGAR - Solicitud de admisión - 3 paticipantes - BE.docx",
   })
   .addAnswer("🎓 Formato de bachiller:", {
     media:
-      "C:/Users/Admin/Desktop/birretito/aws-example/documents/Directiva Taller de elaboración de TSP - BE.pdf", //'c:\ruta\imagen.png'
+      directorio + "/documents/Directiva Taller de elaboración de TSP - BE.pdf",
   })
   .addAnswer(
     [
@@ -1322,7 +1323,7 @@ const flowSustentacionTesisBE0 = addKeyword(["1", "si"])
     "🎯 Te compartimos el cronograma de admisión 2024 dónde se estipulan fechas de atención a tu solicitud..",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes-titulaci%C3%B3n.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes-titulaci%C3%B3n.png?raw=true",
     }
   )
   .addAnswer(
@@ -1363,7 +1364,7 @@ const flowSuficienciaProfesionalBE5 = addKeyword(["continuar"])
     "🎯🚀 Estupendo ahora te compartiremos las tasas económicas para estudiantes provenientes de universidades con licencia denegada.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas-economicas-bachiller-universidad-nolicenciada-suficiencia.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/tasas-economicas-bachiller-universidad-nolicenciada-suficiencia.png?raw=true",
     }
   )
   .addAnswer(
@@ -1391,7 +1392,7 @@ const flowSuficienciaProfesionalBE3 = addKeyword(["continuar"]).addAnswer(
   [
     "🚀 Si cuentas con todos los requisitos completos, tienes que enviarlos al correo 📧 *oficinatitulacion@continental.edu.pe*",
     "\n ➡️ El asunto del correo debe ser el siguiente: [BACHILLER EXTERNO - Admisión] – Nombre/s de estudiante/s",
-    "\n 👀 Debes asegurarte de presentar los requisitos completos , de lo contrario tu solicitud será rechazada.",
+    "\n 👀 Debes asegurarte de presentar los requisitos *completos,* de lo contrario tu solicitud será rechazada.",
     "\n⏱️ Esperare unos minutos para que envíes los formatos al correo indicado, escribe *continuar* si ya lo hiciste.",
   ],
   null,
@@ -1401,23 +1402,24 @@ const flowSuficienciaProfesionalBE3 = addKeyword(["continuar"]).addAnswer(
 
 const flowSuficienciaProfesionalBE2 = addKeyword(["continuar"])
   .addAnswer(
-    "📄 Descarga el formato de la solicitud y llénalo completamente según el instructivo. \n\nInstructivo para rellenar la solicitud:",
+    "📄 Descarga el formato de la solicitud y rellénalo completamente según el instructivo. \n\nInstructivo para rellenar la solicitud:",
     {
       media:
-        "C:/Users/Admin/Desktop/birretito/aws-example/documents/DESCARGAR - Carta de compromiso - BE.docx", //'c:\ruta\imagen.png'
+        directorio + "/documents/DESCARGAR - Carta de compromiso - BE.docx",
     }
   )
   .addAnswer("🎓 Formato de bachiller:", {
     media:
-      "C:/Users/Admin/Desktop/birretito/aws-example/documents/DESCARGAR - Formato de DJ de experiencia profesional - BE.docx", //'c:\ruta\imagen.png'
+      directorio +
+      "/documents/DESCARGAR - Formato de DJ de experiencia profesional - BE.docx",
   })
   .addAnswer("🎓 Formato de bachiller:", {
     media:
-      "C:/Users/Admin/Desktop/birretito/aws-example/documents/DESCARGAR - Solicitud de admisión TSP - BE.docx", //'c:\ruta\imagen.png'
+      directorio + "/documents/DESCARGAR - Solicitud de admisión TSP - BE.docx",
   })
   .addAnswer("🎓 Formato de bachiller:", {
     media:
-      "C:/Users/Admin/Desktop/birretito/aws-example/documents/Directiva Taller de elaboración de TSP - BE.pdf", //'c:\ruta\imagen.png'
+      directorio + "/documents/Directiva Taller de elaboración de TSP - BE.pdf",
   })
   .addAnswer(
     [
@@ -1457,7 +1459,7 @@ const flowSuficienciaProfesionalBE = addKeyword(["2"])
     "🎯 Te compartimos el cronograma de admisión 2024 dónde se estipulan fechas de atención a tu solicitud.",
     {
       media:
-        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes-titulaci%C3%B3n.png?raw=true", //'c:\ruta\imagen.png'
+        "https://github.com/Runniersoaoi/imagenes-provisional/blob/main/img/cronograma-solicitudes-titulaci%C3%B3n.png?raw=true",
     }
   )
   .addAnswer(
@@ -1486,6 +1488,7 @@ const flowMenuTitulos = addKeyword(["2"]).addAnswer(
     "🤓💬 Selecciona la opción que más se adecue a tu caso",
     "\n1️⃣ Bachiller UC",
     "2️⃣ Bachiller proveniente de universidad no licenciada",
+    "\n👀 Recuerda: Si en algún momento ingresas información incorrecta, puedes escribir la palabra *menu* y volveras a el menú principal",
     "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*",
   ],
   null,
@@ -1498,6 +1501,7 @@ const flowMenu = addKeyword(["continuar"]).addAnswer(
     "😊✨Este es mi menú principal escribe el número con la opción que deseas consultar:",
     "\n1️⃣ Bachiller",
     "2️⃣ Título Profesional",
+    "\n👀 Recuerda: Si en algún momento ingresas información incorrecta, puedes escribir la palabra *menu* y volveras a este menú principal",
     "\n✍️ *Escribe* *un* *número* *entre* *1* *y* *2*",
   ],
   null,
